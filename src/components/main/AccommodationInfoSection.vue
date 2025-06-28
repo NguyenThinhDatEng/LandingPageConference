@@ -1,5 +1,5 @@
 <template>
-  <SectionContainer title="THÔNG TIN LƯU TRÚ" section-id="accommodation-info-section">
+  <SectionContainer title="THÔNG TIN LƯU TRÚ" section-id="accommodation">
     <div class="grid grid-cols-3 gap-8">
       <div class="flex flex-col items-start h-full justify-between" v-for="(col, colIdx) in columns" :key="colIdx">
         <div class="text-lg font-bold text-gray-900 mb-8">{{ col.title }}</div>

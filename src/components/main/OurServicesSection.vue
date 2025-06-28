@@ -1,5 +1,5 @@
 <template>
-  <SectionContainer title="DỊCH VỤ CỦA CHÚNG TÔI" section-id="our-services-section">
+  <SectionContainer title="DỊCH VỤ CỦA CHÚNG TÔI" section-id="services">
     <div class="flex gap-8 mx-auto items-start justify-center">
       <div class="flex-3 flex flex-col gap-4 h-full">
         <div class="relative flex flex-1 bg-cover bg-center rounded-lg overflow-hidden items-end"

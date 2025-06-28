@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" id="hero">
+  <section class="hero" id="banner">
     <div class="hero-content">
       <h1>ECHO ASIA 2025<br />3RD VSCI CONGRESS 2025</h1>
       <div class="subtitle">

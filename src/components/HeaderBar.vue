@@ -16,13 +16,14 @@
     </div>
     <nav class="navbar">
       <ul class="menu">
-        <li><a href="#">Trang Chủ</a></li>
-        <li><a href="#">Giới Thiệu</a></li>
-        <li><a href="#">Chương Trình</a></li>
-        <li><a href="#">Đăng Ký</a></li>
-        <li><a href="#">Tài Trợ</a></li>
-        <li><a href="#">Lưu Trú</a></li>
-        <li><a href="#">Liên Hệ</a></li>
+        <li><a href="#banner">Trang Chủ</a></li>
+        <li><a href="#intro">Giới Thiệu</a></li>
+        <li><a href="#program">Chương Trình</a></li>
+        <li><a href="#partners">Đăng ký</a></li>
+        <li><a href="#services">Dịch vụ</a></li>
+        <li><a href="#accommodation">Lưu Trú</a></li>
+        <li><a href="#activities">Hoạt động</a></li>
+        <li><a href="#partners">Đối tác</a></li>
       </ul>
     </nav>
   </header>
