@@ -21,7 +21,7 @@ import IntroSection from '@/components/main/IntroSection.vue'
 import EventHighlightSection from '@/components/main/EventHighlightSection.vue'
 import OurServicesSection from './components/main/OurServicesSection.vue'
 import AccommodationInfoSection from './components/main/AccommodationInfoSection.vue'
-import TypicalActivitiesSection from './components/TypicalActivitiesSection.vue'
+import TypicalActivitiesSection from './components/main/TypicalActivitiesSection.vue'
 import PartnersAndContactSection from './components/PartnersAndContactSection.vue'
 import Footer from './components/Footer.vue'
 
