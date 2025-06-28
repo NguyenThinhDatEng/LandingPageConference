@@ -1,0 +1,36 @@
+<template>
+  <SectionContainer title="GIỚI THIỆU" section-id="intro">
+    <div class="flex flex-wrap md:flex-nowrap items-start justify-center gap-8 mx-auto">
+      <div class="flex-1">
+        <img src="@/assets/imgs/intro/city_in_sunset.jpg" alt="Giới thiệu"
+          class="rounded-md shadow-lg object-cover w-full h-full" />
+      </div>
+      <div class="flex-1 flex flex-col gap-6">
+        <p class="text-base text-gray-800 leading-relaxed">
+          Thương Vụ Việt Nam Tại Indonesia Là Cơ Quan Của Bộ Công Thương Việt Nam, Đóng Vai Trò Then Chốt Trong Việc
+          Thúc Đẩy Quan Hệ Kinh Tế, Thương Mại Giữa Việt Nam Và Indonesia. Đặt Tại Jakarta, Thương Vụ Có Nhiệm Vụ
+          Nghiên
+          Cứu Thị Trường, Xúc Tiến Thương Mại, Hỗ Trợ Doanh Nghiệp Hai Nước, Quản Lý Nhà Nước Về Thương Mại Và Tăng
+          Cường Hợp Tác Kinh Tế Song Phương. Đây Là Cầu Nối Quan Trọng Giúp Doanh Nghiệp Việt Nam Tiếp Cận Thị
+          Trường
+          Indonesia Và Ngược Lại.
+        </p>
+        <button
+          class="w-fit h-fit bg-gray-300 text-gray-900 border-none rounded-md px-7 py-2.5 text-base font-semibold cursor-pointer shadow-md transition-colors duration-200 hover:bg-blue-900 hover:text-white">
+          Xem Chi Tiết
+        </button>
+      </div>
+    </div>
+  </SectionContainer>
+</template>
+
+<script>
+import SectionContainer from '@/components/SectionContainer.vue'
+
+export default {
+  name: 'AboutSection',
+  components: {
+    SectionContainer
+  }
+}
+</script>

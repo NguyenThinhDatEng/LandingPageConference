@@ -17,9 +17,9 @@
 <script>
 import HeaderBar from './components/HeaderBar.vue'
 import HeroSection from './components/HeroSection.vue'
-import IntroSection from './components/IntroSection.vue'
-import EventHighlightSection from './components/NewsSection.vue'
-import OurServicesSection from './components/OurServicesSection.vue'
+import IntroSection from '@/components/main/IntroSection.vue'
+import EventHighlightSection from '@/components/main/EventHighlightSection.vue'
+import OurServicesSection from './components/main/OurServicesSection.vue'
 import AccommodationInfoSection from './components/AccommodationInfoSection.vue'
 import TypicalActivitiesSection from './components/TypicalActivitiesSection.vue'
 import PartnersAndContactSection from './components/PartnersAndContactSection.vue'
