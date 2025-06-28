@@ -15,18 +15,18 @@
 </template>
 
 <script>
-import HeaderBar from './components/HeaderBar.vue'
-import HeroSection from './components/HeroSection.vue'
-import IntroSection from '@/components/main/IntroSection.vue'
-import EventHighlightSection from '@/components/main/EventHighlightSection.vue'
-import OurServicesSection from './components/main/OurServicesSection.vue'
-import AccommodationInfoSection from './components/main/AccommodationInfoSection.vue'
-import TypicalActivitiesSection from './components/main/TypicalActivitiesSection.vue'
-import PartnersAndContactSection from './components/PartnersAndContactSection.vue'
-import Footer from './components/Footer.vue'
+import HeaderBar from "./components/HeaderBar.vue";
+import HeroSection from "./components/HeroSection.vue";
+import IntroSection from "@/components/main/IntroSection.vue";
+import EventHighlightSection from "@/components/main/EventHighlightSection.vue";
+import OurServicesSection from "./components/main/OurServicesSection.vue";
+import AccommodationInfoSection from "./components/main/AccommodationInfoSection.vue";
+import TypicalActivitiesSection from "./components/main/TypicalActivitiesSection.vue";
+import PartnersAndContactSection from "./components/main/PartnersAndContactSection.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HeaderBar,
     HeroSection,
@@ -36,9 +36,16 @@ export default {
     AccommodationInfoSection,
     TypicalActivitiesSection,
     PartnersAndContactSection,
-    Footer
-  }
-}
+    Footer,
+  },
+  mounted() {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  },
+};
 </script>
 
 <style>

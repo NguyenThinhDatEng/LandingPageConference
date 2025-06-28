@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SectionContainer from './SectionContainer.vue'
+import SectionContainer from '../SectionContainer.vue'
 
 export default {
   name: 'PartnersAndContactSection',

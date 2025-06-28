@@ -53,7 +53,7 @@ export default {
 
 <style class="scss">
 .event-highlight-section {
-  .containter-background {
+  .container-background {
     background: #4a6a7b url('@/assets/imgs/outstandingEvent/background.png') left top/cover no-repeat;
     background-size: cover;
     background-position: center;

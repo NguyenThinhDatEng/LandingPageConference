@@ -1,8 +1,16 @@
 <template>
-  <section class="flex justify-center bg-white" :id="sectionId">
+  <section
+    class="flex justify-center bg-white scroll-mt-[var(--top-scroll)]"
+    :id="sectionId"
+  >
     <div class="container flex flex-col items-center">
-      <div class="container-content gap-8 flex flex-col items-center md:max-w-6xl" :class="[{ 'md:w-6xl': isFullWidth }]">
-        <h2 class="text-3xl font-extrabold text-gray-900 w-full text-left">{{ title }}</h2>
+      <div
+        class="container-content gap-8 flex flex-col items-center md:max-w-6xl"
+        :class="[{ 'md:w-6xl': isFullWidth }]"
+      >
+        <h2 class="text-3xl font-extrabold text-gray-900 w-full text-left">
+          {{ title }}
+        </h2>
         <slot></slot>
       </div>
     </div>
@@ -11,20 +19,23 @@
 
 <script>
 export default {
-  name: 'SectionContainer',
+  name: "SectionContainer",
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     sectionId: {
       type: String,
-      default: ''
+      default: "",
     },
     isFullWidth: {
       type: Boolean,
-      default: false
-    }
-  }
-}
+      default: false,
+    },
+  },
+};
 </script>
+
+<style scoped>
+</style>

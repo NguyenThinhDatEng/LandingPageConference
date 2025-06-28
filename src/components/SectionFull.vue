@@ -1,9 +1,13 @@
 <template>
-  <section class="flex justify-center bg-white" :id="sectionId">
+  <section class="flex justify-center bg-white scroll-mt-[var(--top-scroll)]" :id="sectionId">
     <div class="flex flex-col items-center w-full">
       <div class="gap-8 flex flex-col items-center w-full">
-        <h2 class="container text-3xl md:max-w-6xl font-extrabold text-gray-900">{{ title }}</h2>
-        <div class="containter-background w-full flex justify-center md:py-8">
+        <h2
+          class="container text-3xl md:max-w-6xl font-extrabold text-gray-900"
+        >
+          {{ title }}
+        </h2>
+        <div class="container-background w-full flex justify-center md:py-8">
           <div class="md:max-w-6xl">
             <slot></slot>
           </div>
@@ -15,16 +19,19 @@
 
 <script>
 export default {
-  name: 'SectionContainer',
+  name: "SectionContainer",
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     sectionId: {
       type: String,
-      default: ''
-    }
-  }
-}
+      default: "",
+    },
+  },
+};
 </script>
+
+<style scoped>
+</style>

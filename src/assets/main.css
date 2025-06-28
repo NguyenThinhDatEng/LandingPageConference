@@ -3,12 +3,13 @@
 
 @tailwind utilities;
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+:root {
+  /* hoặc giá trị thực tế của .topbar */
+  --header-topbar-height: 88px;
+  /* hoặc giá trị thực tế của .navbar */
+  --header-navbar-height: 48px;
+  --header-bar-height: calc(var(--header-topbar-height) + var(--header-navbar-height));
+  --top-scroll: calc(var(--header-bar-height) + 32px);
 }
 
 @media (hover: hover) {

@@ -1,38 +1,46 @@
 <template>
-  <header class="header-bar">
-    <div class="topbar">
-      <div class="logo-group">
-        <img src="@/assets/imgs/logo/logo01.svg" alt="logo1" />
-        <img src="@/assets/imgs/logo/logo02.svg" alt="logo2" />
-        <img src="@/assets/imgs/logo/logo03.svg" alt="logo3" />
-        <img src="@/assets/imgs/logo/logo04.svg" alt="logo4" />
-      </div>
-      <input class="search-input" placeholder="Tìm Kiếm Thông Tin ...." />
-      <div class="lang-switch">
-        <span class="lang active">VN</span>
-        <span class="divider">|</span>
-        <span class="lang">ENG</span>
+  <header class="header-bar flex flex-col item-center">
+    <div
+      class="topbar-background flex justify-center h-[var(--header-topbar-height)]"
+    >
+      <div class="topbar container justify-between flex items-center">
+        <div class="logo-group">
+          <img src="@/assets/imgs/logo/logo01.svg" alt="logo1" />
+          <img src="@/assets/imgs/logo/logo02.svg" alt="logo2" />
+          <img src="@/assets/imgs/logo/logo03.svg" alt="logo3" />
+          <img src="@/assets/imgs/logo/logo04.svg" alt="logo4" />
+        </div>
+        <input class="search-input" placeholder="Tìm Kiếm Thông Tin ...." />
+        <div class="lang-switch">
+          <span class="lang active">VN</span>
+          <span class="divider">|</span>
+          <span class="lang">ENG</span>
+        </div>
       </div>
     </div>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="#banner">Trang Chủ</a></li>
-        <li><a href="#intro">Giới Thiệu</a></li>
-        <li><a href="#program">Chương Trình</a></li>
-        <li><a href="#partners">Đăng ký</a></li>
-        <li><a href="#services">Dịch vụ</a></li>
-        <li><a href="#accommodation">Lưu Trú</a></li>
-        <li><a href="#activities">Hoạt động</a></li>
-        <li><a href="#partners">Đối tác</a></li>
-      </ul>
-    </nav>
+    <div
+      class="navbar-background flex justify-center h-[var(--header-navbar-height)]"
+    >
+      <nav class="navbar md:w-6xl">
+        <ul class="menu flex gap-12">
+          <li><a href="#banner">Trang Chủ</a></li>
+          <li><a href="#intro">Giới Thiệu</a></li>
+          <li><a href="#program">Chương Trình</a></li>
+          <li><a href="#partners">Đăng ký</a></li>
+          <li><a href="#services">Dịch vụ</a></li>
+          <li><a href="#accommodation">Lưu Trú</a></li>
+          <li><a href="#activities">Hoạt động</a></li>
+          <li><a href="#partners">Đối tác</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'HeaderBar'
-}
+  name: "HeaderBar",
+};
 </script>
 
 <style scoped>
@@ -43,15 +51,7 @@ export default {
   width: 100%;
   z-index: 1000;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 40px 10px 40px;
-  background: #fff;
-  gap: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 .logo-group {
   display: flex;
@@ -69,7 +69,7 @@ export default {
   flex: 1 1 420px;
   max-width: 480px;
   min-width: 260px;
-  background: #EEAA2C;
+  background: #eeaa2c;
   border: none;
   border-radius: 6px;
   padding: 14px 28px;
@@ -78,7 +78,7 @@ export default {
   font-style: italic;
   font-weight: 400;
   outline: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 .search-input::placeholder {
   color: #fff;
@@ -106,69 +106,31 @@ export default {
   transition: color 0.2s;
 }
 .lang.active {
-  color: #1665B0;
+  color: #1665b0;
 }
 .divider {
   color: #bbb;
   font-size: 1.1rem;
   font-weight: 400;
 }
-.navbar {
-  background: #003F91;
-  border-top: 2px solid #111;
-  width: 100%;
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navbar-background {
+  background: #003f91;
 }
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  width: 100%;
-}
+
 .menu li a {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
   font-size: 1.15rem;
   font-family: inherit;
-  padding: 12px 0;
   display: block;
   transition: color 0.2s, border-bottom 0.2s;
   text-align: center;
+  height: var(--header-navbar-height);
+  line-height: var(--header-navbar-height);
 }
+
 .menu li a:hover {
-  color: #FFD24C;
-  border-bottom: 2.5px solid #FFD24C;
-}
-@media (max-width: 900px) {
-  .topbar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    padding: 18px 10px 10px 10px;
-  }
-  .logo-group {
-    justify-content: center;
-  }
-  .logo-group img {
-    height: 64px;
-  }
-  .search-input {
-    max-width: 100%;
-    min-width: 0;
-  }
-  .lang-switch {
-    align-self: flex-end;
-  }
-  .menu {
-    gap: 18px;
-    font-size: 1rem;
-  }
+  color: #ffd24c;
 }
 </style> 
