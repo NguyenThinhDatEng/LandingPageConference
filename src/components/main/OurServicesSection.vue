@@ -1,8 +1,34 @@
 <template>
   <SectionContainer title="DỊCH VỤ CỦA CHÚNG TÔI" section-id="services">
-    <div class="flex gap-8 mx-auto items-start justify-center">
-      <div class="flex-3 flex flex-col gap-4 h-full">
-        <div class="relative flex flex-1 bg-cover bg-center rounded-lg overflow-hidden items-end"
+    <!-- Mobile: Single column layout -->
+    <div class="grid grid-cols-1 gap-6 md:hidden">
+      <!-- Big cards for mobile -->
+      <div class="relative flex bg-cover bg-center rounded-lg overflow-hidden items-end h-48"
+        v-for="(item, idx) in bigCards" :key="idx" :style="{ backgroundImage: `url(${item.img})` }">
+        <div
+          class="w-full h-full flex flex-col justify-end items-start pb-4 pl-4 bg-gradient-to-t from-black/55 via-black/30 to-black/10">
+          <div class="text-base text-white font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)]">{{ item.caption }}
+          </div>
+        </div>
+      </div>
+      
+      <!-- Small cards for mobile -->
+      <div
+        class="flex items-start bg-white rounded-lg shadow-sm border-[1.5px] border-gray-200 p-3 gap-3"
+        v-for="(item, idx) in smallCards" :key="idx">
+        <img :src="item.img" alt="service" class="w-20 h-16 object-cover rounded-md flex-shrink-0" />
+        <div class="flex flex-col justify-center gap-1 min-w-0">
+          <div class="text-sm font-bold text-gray-900 leading-tight">{{ item.title }}</div>
+          <div class="text-xs text-gray-600 font-normal leading-tight">{{ item.desc }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop: Original layout with grid -->
+    <div class="hidden md:grid md:grid-cols-5 gap-8 mx-auto items-start">
+      <!-- Big cards section - takes 3 columns -->
+      <div class="md:col-span-3 flex flex-col gap-4 h-full">
+        <div class="relative flex flex-1 bg-cover bg-center rounded-lg overflow-hidden items-end min-h-[200px]"
           v-for="(item, idx) in bigCards" :key="idx" :style="{ backgroundImage: `url(${item.img})` }">
           <div
             class="w-full h-full flex flex-col justify-end items-start pb-6 pl-7 bg-gradient-to-t from-black/55 via-black/30 to-black/10">
@@ -11,7 +37,9 @@
           </div>
         </div>
       </div>
-      <div class="flex-2 flex flex-col gap-4">
+      
+      <!-- Small cards section - takes 2 columns -->
+      <div class="md:col-span-2 flex flex-col gap-4">
         <div
           class="flex items-start bg-white rounded-lg shadow-sm border-[1.5px] border-gray-200 p-3 pl-4 gap-[18px] min-h-[90px]"
           v-for="(item, idx) in smallCards" :key="idx">
