@@ -1,26 +1,38 @@
 <template>
   <header class="header-bar flex flex-col item-center">
-    <div
-      class="topbar-background flex justify-center h-[var(--header-topbar-height)]"
-    >
+    <div class="topbar-background flex justify-center h-[var(--header-topbar-height)]">
       <div class="topbar container justify-between flex items-center">
-        <div class="logo-group">
+        <div class="logo-group flex items-center md:gap-4">
           <img src="@/assets/imgs/logo/logo01.svg" alt="logo1" />
           <img src="@/assets/imgs/logo/logo02.svg" alt="logo2" />
           <img src="@/assets/imgs/logo/logo03.svg" alt="logo3" />
           <img src="@/assets/imgs/logo/logo04.svg" alt="logo4" />
         </div>
-        <input class="search-input" placeholder="Tìm Kiếm Thông Tin ...." />
-        <div class="lang-switch">
-          <span class="lang active">VN</span>
-          <span class="divider">|</span>
-          <span class="lang">ENG</span>
+        <div class="topbar-right flex items-center gap-4">
+          <input
+            class="search-input hidden md:flex flex-1 max-w-[480px] min-w-[320px] bg-[#eeaa2c] border-none rounded-md px-7 py-3.5 text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
+            placeholder="Tìm Kiếm Thông Tin ...." />
+          <div class="lang-switch">
+            <span class="lang active">VN</span>
+            <span class="divider">|</span>
+            <span class="lang">ENG</span>
+          </div>
+          <!-- Mobile menu icon -->
+          <button 
+            class="mobile-menu-btn md:hidden flex flex-col justify-center items-center w-10 h-10 bg-[#003f91] border-none rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#002d6b]" 
+            @click="toggleMobileMenu" 
+            :class="{ 'active': isMobileMenuOpen }"
+          >
+            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-sm"></span>
+            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-sm"></span>
+            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-sm"></span>
+          </button>
         </div>
       </div>
     </div>
-    <div
-      class="navbar-background flex justify-center h-[var(--header-navbar-height)]"
-    >
+
+    <!-- Desktop navbar -->
+    <div class="navbar-background hidden md:flex justify-center h-[var(--header-navbar-height)]">
       <nav class="navbar md:w-6xl">
         <ul class="menu flex gap-12">
           <li><a href="#banner">Trang Chủ</a></li>
@@ -34,12 +46,41 @@
         </ul>
       </nav>
     </div>
+
+    <!-- Mobile menu dropdown -->
+    <div class="mobile-menu md:hidden" :class="{ 'open': isMobileMenuOpen }">
+      <nav class="mobile-nav">
+        <ul class="mobile-menu-list">
+          <li><a href="#banner" @click="closeMobileMenu">Trang Chủ</a></li>
+          <li><a href="#intro" @click="closeMobileMenu">Giới Thiệu</a></li>
+          <li><a href="#program" @click="closeMobileMenu">Chương Trình</a></li>
+          <li><a href="#partners" @click="closeMobileMenu">Đăng ký</a></li>
+          <li><a href="#services" @click="closeMobileMenu">Dịch vụ</a></li>
+          <li><a href="#accommodation" @click="closeMobileMenu">Lưu Trú</a></li>
+          <li><a href="#activities" @click="closeMobileMenu">Hoạt động</a></li>
+          <li><a href="#partners" @click="closeMobileMenu">Đối tác</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
   name: "HeaderBar",
+  data() {
+    return {
+      isMobileMenuOpen: false
+    };
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    },
+    closeMobileMenu() {
+      this.isMobileMenuOpen = false;
+    }
+  }
 };
 </script>
 
@@ -53,38 +94,21 @@ export default {
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
+
 .logo-group img {
-  height: 88px;
+  height: var(--header-topbar-height);
   width: auto;
   object-fit: contain;
   background: transparent;
   transition: height 0.2s;
 }
-.search-input {
-  flex: 1 1 420px;
-  max-width: 480px;
-  min-width: 260px;
-  background: #eeaa2c;
-  border: none;
-  border-radius: 6px;
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  color: #fff;
-  font-style: italic;
-  font-weight: 400;
-  outline: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.search-input::placeholder {
-  color: #fff;
-  opacity: 0.85;
-  font-style: italic;
-}
+
 .lang-switch {
   display: flex;
   align-items: center;
@@ -97,6 +121,7 @@ export default {
   height: 32px;
   justify-content: center;
 }
+
 .lang {
   font-size: 1rem;
   font-weight: 600;
@@ -105,14 +130,79 @@ export default {
   padding: 0 4px;
   transition: color 0.2s;
 }
+
 .lang.active {
   color: #1665b0;
 }
+
 .divider {
   color: #bbb;
   font-size: 1.1rem;
   font-weight: 400;
 }
+
+.mobile-menu-btn.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile menu dropdown */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #003f91;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  max-height: 400px;
+}
+
+.mobile-nav {
+  padding: 1rem 0;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-list li:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-list li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-menu-list li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd24c;
+}
+
 .navbar-background {
   background: #003f91;
 }
@@ -133,4 +223,4 @@ export default {
 .menu li a:hover {
   color: #ffd24c;
 }
-</style> 
+</style>
