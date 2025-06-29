@@ -2,15 +2,15 @@
   <header class="header-bar flex flex-col item-center">
     <div class="topbar-background flex justify-center h-[var(--header-topbar-height)]">
       <div class="topbar container justify-between flex items-center">
-        <div class="logo-group flex items-center">
-          <img src="@/assets/imgs/logo/logo1.png" alt="logo1" />
-          <img src="@/assets/imgs/logo/logo2.png" alt="logo2" />
-          <img src="@/assets/imgs/logo/logo3.jpg" alt="logo3" />
-          <img src="@/assets/imgs/logo/logo4.png" alt="logo4" />
+        <div class="logo-group flex flex-1 items-center">
+          <img src="@/assets/imgs/logo/logo1.png" alt="logo1" class="w-[80px] md:w-[156.44px]"/>
+          <img src="@/assets/imgs/logo/logo2.png" alt="logo2" class="w-[80px] md:w-[156.44px]"/>
+          <img src="@/assets/imgs/logo/logo3.jpg" alt="logo3" class="w-[80px] md:w-[156.44px]"/>
+          <img src="@/assets/imgs/logo/logo4.png" alt="logo4" class="w-[80px] md:w-[156.44px]"/>
         </div>
-        <div class="topbar-right flex flex-1 items-center justify-end gap-4">
+        <div class="topbar-right flex items-center justify-end gap-4">
           <input
-            class="search-input hidden md:flex flex-1 max-w-[480px] min-w-[320px] bg-[#eeaa2c] border-none rounded-md px-7 py-3.5 text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
+            class="search-input hidden md:flex flex-1 max-w-[480px] xl:min-w-[480px] min-w-[320px] bg-[#eeaa2c] border-none rounded-md px-7 py-3.5 text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
             :placeholder="$t('header.search')" />
           <div class="lang-switch">
             <span 
@@ -118,7 +118,7 @@ export default {
 
 .logo-group img {
   height: var(--header-topbar-height);
-  min-width: 156.44px;
+  max-width: 156.44px;
   object-fit: contain;
   background: transparent;
   transition: height 0.2s;
