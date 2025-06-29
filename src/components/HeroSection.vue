@@ -1,5 +1,5 @@
 <template>
-  <section class="hero scroll-mt-[var(--top-scroll)]" id="banner">
+  <section class="hero scroll-mt-[var(--top-scroll)] px-2 md:pl-32" id="banner">
     <div class="hero-content">
       <h1>{{ $t('hero.title') }}<br />{{ $t('hero.subtitle') }}</h1>
       <div class="subtitle">
@@ -27,7 +27,6 @@ export default {
   background: linear-gradient(to right, rgba(0,63,145,0.6) 60%, rgba(0,63,145,0.1) 100%), url('@/assets/imgs/Banner.jpg') center/cover no-repeat;
   aspect-ratio: 5 / 2;
   color: #fff;
-  padding: 0 0 0 5vw;
 }
 .hero-content {
   z-index: 1;
@@ -53,7 +52,6 @@ export default {
 @media (max-width: 900px) {
   .hero {
     min-height: 320px;
-    padding-left: 2vw;
   }
   .hero-content {
     padding: 32px 0;

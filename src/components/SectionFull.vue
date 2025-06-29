@@ -3,12 +3,12 @@
     <div class="flex flex-col items-center w-full">
       <div class="gap-8 flex flex-col items-center w-full">
         <h2
-          class="container text-3xl md:max-w-6xl font-extrabold text-gray-900"
+          class="container text-3xl md:max-w-6xl font-extrabold text-gray-900 px-2 md:px-0"
         >
           {{ title }}
         </h2>
         <div class="container-background w-full flex justify-center py-4 md:py-8">
-          <div class="md:max-w-6xl">
+          <div class="md:max-w-6xl px-2 md:px-0">
             <slot></slot>
           </div>
         </div>

@@ -1,44 +1,44 @@
 <template>
   <header class="header-bar flex flex-col item-center">
-    <div class="topbar-background flex justify-center h-[var(--header-topbar-height)]">
-      <div class="topbar container justify-between flex items-center">
-        <div class="logo-group flex flex-1 items-center">
-          <img src="@/assets/imgs/logo/logo1.png" alt="logo1" class="w-[80px] md:w-[156.44px]"/>
-          <img src="@/assets/imgs/logo/logo2.png" alt="logo2" class="w-[80px] md:w-[156.44px]"/>
-          <img src="@/assets/imgs/logo/logo3.jpg" alt="logo3" class="w-[80px] md:w-[156.44px]"/>
-          <img src="@/assets/imgs/logo/logo4.png" alt="logo4" class="w-[80px] md:w-[156.44px]"/>
+    <div class="topbar-background flex justify-center">
+      <div class="topbar container flex flex-col-reverse md:flex-row md:justify-between md:items-center">
+        <!-- Logo group - full width on mobile, flex-1 on desktop -->
+        <div class="logo-group flex justify-center md:justify-start md:flex-1 items-center">
+          <img src="@/assets/imgs/logo/logo1.png" alt="logo1" class="w-1/4 md:w-[156.44px]" />
+          <img src="@/assets/imgs/logo/logo2.png" alt="logo2" class="w-1/4 md:w-[156.44px]" />
+          <img src="@/assets/imgs/logo/logo3.jpg" alt="logo3" class="w-1/4 md:w-[156.44px]" />
+          <img src="@/assets/imgs/logo/logo4.png" alt="logo4" class="w-1/4 md:w-[156.44px]" />
         </div>
-        <div class="topbar-right flex items-center justify-end gap-4">
+
+        <!-- Topbar right - full width on mobile, flex items on desktop -->
+        <div
+          class="topbar-right flex md:flex-row items-center justify-end gap-4 py-2 md:py-0 px-2 md:px-0">
           <input
-            class="search-input hidden md:flex flex-1 max-w-[480px] xl:min-w-[480px] min-w-[320px] bg-[#eeaa2c] border-none rounded-md px-7 py-3.5 text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
+            class="search-input md:flex flex-1 max-w-[480px] xl:min-w-[480px] bg-[#eeaa2c] border-none rounded-md px-2 md:px-6 py-3.5 text-xs md:text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
             :placeholder="$t('header.search')" />
-          <div class="lang-switch">
-            <span 
-              class="lang" 
-              :class="{ 'active': currentLocale === 'vi' }"
-              @click="changeLocale('vi')"
-            >
-              VN
-            </span>
-            <span class="divider">|</span>
-            <span 
-              class="lang" 
-              :class="{ 'active': currentLocale === 'en' }"
-              @click="changeLocale('en')"
-            >
-              ENG
-            </span>
+
+          <div class="flex items-center gap-4">
+            <div class="lang-switch">
+              <span class="lang" :class="{ 'active': currentLocale === 'vi' }" @click="changeLocale('vi')">
+                VN
+              </span>
+              <span class="divider">|</span>
+              <span class="lang" :class="{ 'active': currentLocale === 'en' }" @click="changeLocale('en')">
+                ENG
+              </span>
+            </div>
+            <!-- Mobile menu icon -->
+            <button
+              class="mobile-menu-btn md:hidden flex flex-col justify-center items-center w-10 h-10 bg-[#003f91] border-none rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#002d6b]"
+              @click="toggleMobileMenu" :class="{ 'active': isMobileMenuOpen }">
+              <span
+                class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
+              <span
+                class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
+              <span
+                class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
+            </button>
           </div>
-          <!-- Mobile menu icon -->
-          <button 
-            class="mobile-menu-btn md:hidden flex flex-col justify-center items-center w-10 h-10 bg-[#003f91] border-none rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#002d6b]" 
-            @click="toggleMobileMenu" 
-            :class="{ 'active': isMobileMenuOpen }"
-          >
-            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
-            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
-            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
-          </button>
         </div>
       </div>
     </div>
@@ -114,6 +114,10 @@ export default {
   z-index: 1000;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.topbar-background {
+  min-height: var(--header-topbar-height);
 }
 
 .logo-group img {
