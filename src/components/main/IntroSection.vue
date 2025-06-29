@@ -1,12 +1,18 @@
 <template>
   <SectionContainer title="GIỚI THIỆU" section-id="intro">
-    <div class="flex flex-wrap md:flex-nowrap items-start justify-center gap-8 mx-auto">
-      <div class="flex-1">
-        <img src="@/assets/imgs/intro/city_in_sunset.jpg" alt="Giới thiệu"
-          class="rounded-md shadow-lg object-cover w-full h-full" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mx-auto">
+      <!-- Image container -->
+      <div class="w-full">
+        <img 
+          src="@/assets/imgs/intro/city_in_sunset.jpg" 
+          alt="Giới thiệu"
+          class="rounded-md shadow-lg object-cover w-full h-48 sm:h-64 md:h-auto md:max-h-96" 
+        />
       </div>
-      <div class="flex-1 flex flex-col gap-6">
-        <p class="text-base text-gray-800 leading-relaxed">
+      
+      <!-- Content container -->
+      <div class="w-full flex flex-col gap-4 md:gap-6">
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed text-center md:text-left">
           Thương Vụ Việt Nam Tại Indonesia Là Cơ Quan Của Bộ Công Thương Việt Nam, Đóng Vai Trò Then Chốt Trong Việc
           Thúc Đẩy Quan Hệ Kinh Tế, Thương Mại Giữa Việt Nam Và Indonesia. Đặt Tại Jakarta, Thương Vụ Có Nhiệm Vụ
           Nghiên
@@ -15,10 +21,12 @@
           Trường
           Indonesia Và Ngược Lại.
         </p>
-        <button
-          class="w-fit h-fit bg-gray-300 text-gray-900 border-none rounded-md px-7 py-2.5 text-base font-semibold cursor-pointer shadow-md transition-colors duration-200 hover:bg-blue-900 hover:text-white">
-          Xem Chi Tiết
-        </button>
+        <div class="flex justify-center md:justify-start">
+          <button
+            class="w-fit h-fit bg-gray-300 text-gray-900 border-none rounded-md px-6 sm:px-7 py-2.5 text-sm sm:text-base font-semibold cursor-pointer shadow-md transition-colors duration-200 hover:bg-blue-900 hover:text-white">
+            Xem Chi Tiết
+          </button>
+        </div>
       </div>
     </div>
   </SectionContainer>
