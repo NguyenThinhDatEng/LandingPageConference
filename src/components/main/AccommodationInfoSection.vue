@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import bridgeMorning from '@/assets/imgs/accommodationInfo/bridget_in_morning.png'
+import info from '@/assets/imgs/accommodationInfo/info.jpg'
 import SectionContainer from '@/components/SectionContainer.vue'
 
 export default {
@@ -49,22 +49,22 @@ export default {
         {
           titleKey: 'accommodation.section_policies',
           items: [
-            { img: bridgeMorning, titleKey: 'accommodation.policy_1' },
-            { img: bridgeMorning, titleKey: 'accommodation.policy_2' }
+            { img: info, titleKey: 'accommodation.policy_1' },
+            { img: info, titleKey: 'accommodation.policy_2' }
           ]
         },
         {
           titleKey: 'accommodation.section_procedures',
           items: [
-            { img: bridgeMorning, titleKey: 'accommodation.procedure_1' },
-            { img: bridgeMorning, titleKey: 'accommodation.procedure_2' }
+            { img: info, titleKey: 'accommodation.procedure_1' },
+            { img: info, titleKey: 'accommodation.procedure_2' }
           ]
         },
         {
           titleKey: 'accommodation.section_news',
           items: [
-            { img: bridgeMorning, titleKey: 'accommodation.news_1' },
-            { img: bridgeMorning, titleKey: 'accommodation.news_2' }
+            { img: info, titleKey: 'accommodation.news_1' },
+            { img: info, titleKey: 'accommodation.news_2' }
           ]
         }
       ]

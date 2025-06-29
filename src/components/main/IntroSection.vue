@@ -4,7 +4,7 @@
       <!-- Image container -->
       <div class="w-full">
         <img 
-          src="@/assets/imgs/intro/city_in_sunset.jpg" 
+          src="@/assets/imgs/intro/intro.jpg" 
           alt="Giới thiệu"
           class="rounded-md shadow-lg object-cover w-full h-48 sm:h-64 md:h-auto md:max-h-96" 
         />

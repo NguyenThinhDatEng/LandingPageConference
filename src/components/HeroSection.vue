@@ -24,15 +24,8 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-  to bottom,
-  rgba(255, 182, 165, 0.6),
-  rgba(176, 132, 204, 0.6),
-  rgba(90, 79, 160, 0.7),
-  rgba(42, 45, 94, 0.8)
-  ),
-  url('@/assets/imgs/Banner.jpg') center/cover no-repeat;
-  /* background: linear-gradient(90deg, rgba(0,63,145,0.6) 60%, rgba(0,63,145,0.1) 100%), url('@/assets/imgs/Banner.jpg') center/cover no-repeat; */
+  background: linear-gradient(to right, rgba(0,63,145,0.6) 60%, rgba(0,63,145,0.1) 100%), url('@/assets/imgs/Banner.jpg') center/cover no-repeat;
+  aspect-ratio: 5 / 2;
   color: #fff;
   padding: 0 0 0 5vw;
 }

@@ -45,8 +45,8 @@
 </template>
 
 <script>
-import cauVang from '@/assets/imgs/myServices/cau_vang.png'
-import bridgeEvening from '@/assets/imgs/myServices/bridge_in_evening.jpg'
+import service01 from '@/assets/imgs/myServices/service01.jpg'
+import service03 from '@/assets/imgs/myServices/service03.png'
 import SectionContainer from '@/components/SectionContainer.vue'
 
 export default {
@@ -58,34 +58,32 @@ export default {
     return {
       bigCards: [
         {
-          img: cauVang,
-          title: 'CẦU VÀNG',
+          img: service01,
           captionKey: 'services.halalIndonesia'
         },
         {
-          img: cauVang,
-          title: 'CẦU VÀNG',
+          img: service01,
           captionKey: 'services.halalCertification'
         }
       ],
       smallCards: [
         {
-          img: bridgeEvening,
+          img: service03,
           titleKey: 'services.indonesiaMarket',
           descKey: 'services.indonesiaMarketDesc'
         },
         {
-          img: bridgeEvening,
+          img: service03,
           titleKey: 'services.vietnamBusiness',
           descKey: 'services.indonesiaMarketDesc'
         },
         {
-          img: bridgeEvening,
+          img: service03,
           titleKey: 'services.exportOpportunity',
           descKey: 'services.indonesiaMarketDesc'
         },
         {
-          img: bridgeEvening,
+          img: service03,
           titleKey: 'services.agricultureMarket',
           descKey: 'services.indonesiaMarketDesc'
         }

@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import img01 from '@/assets/imgs/typicalActivities/img01.png'
-import img02 from '@/assets/imgs/typicalActivities/img02.png'
-import img03 from '@/assets/imgs/typicalActivities/img03.png'
-import img04 from '@/assets/imgs/typicalActivities/img04.png'
-import img05 from '@/assets/imgs/typicalActivities/img05.png'
-import img06 from '@/assets/imgs/typicalActivities/img06.png'
+import img01 from '@/assets/imgs/typicalActivities/img01.jpg'
+import img02 from '@/assets/imgs/typicalActivities/img02.jpg'
+import img03 from '@/assets/imgs/typicalActivities/img03.jpg'
+import img04 from '@/assets/imgs/typicalActivities/img04.jpg'
+import img05 from '@/assets/imgs/typicalActivities/img05.jpg'
+import img06 from '@/assets/imgs/typicalActivities/img06.jpg'
 
 export default {
   name: 'TypicalActivitiesSection',

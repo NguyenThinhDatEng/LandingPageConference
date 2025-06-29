@@ -19,7 +19,7 @@
 
 <script>
 import SectionContainer from '@/components/SectionContainer.vue'
-import cityWithBeach from '@/assets/imgs/outstandingEvent/city_with_beach.png'
+import event from '@/assets/imgs/outstandingEvent/event.jpg'
 
 export default {
   name: 'EventHighlightSection',
@@ -30,19 +30,19 @@ export default {
     return {
       events: [
         {
-          img: cityWithBeach,
+          img: event,
           titleKey: 'eventHighlight.highlights.0'
         },
         {
-          img: cityWithBeach,
+          img: event,
           titleKey: 'eventHighlight.highlights.1'
         },
         {
-          img: cityWithBeach,
+          img: event,
           titleKey: 'eventHighlight.highlights.2'
         },
         {
-          img: cityWithBeach,
+          img: event,
           titleKey: 'eventHighlight.highlights.3'
         }
       ]
