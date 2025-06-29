@@ -19,7 +19,7 @@ export default {
   
   // Hero Section
   hero: {
-    title: 'ECHO ASIA 2025',
+    title: 'VAGO ASIA 2025',
     subtitle: '3RD VSCI CONGRESS 2025',
     description: 'SCIENTIFIC CONFERENCE',
     description2: 'ASIA PACIFIC ECHOCARDIOGRAPHY SOCIETY 2025',
@@ -121,7 +121,7 @@ export default {
     content: 'CONTENT',
     details: 'DETAILS',
     sendInfo: 'SEND INFORMATION',
-    conferenceTitle: 'ECHO ASIA 2025 - SCIENTIFIC CONFERENCE',
+    conferenceTitle: 'VAGO ASIA 2025 - SCIENTIFIC CONFERENCE',
     address: 'Address: Xx Da Nang City, Vietnam.',
     fax: 'Fax: +84.12345678',
     emailContact: 'Email: Abc@Gmail.Com'

@@ -19,7 +19,7 @@ export default {
   
   // Hero Section
   hero: {
-    title: 'ECHO ASIA 2025',
+    title: 'VAGO ASIA 2025',
     subtitle: '3RD VSCI CONGRESS 2025',
     description: 'HỘI NGHỊ KHOA HỌC',
     description2: 'HIỆP HỘI SIÊU ÂM TIM CHÂU Á THÁI BÌNH DƯƠNG NĂM 2025',
@@ -121,7 +121,7 @@ export default {
     content: 'NỘI DUNG',
     details: 'CHI TIẾT',
     sendInfo: 'GỬI THÔNG TIN',
-    conferenceTitle: 'ECHO ASIA 2025 - HỘI NGHỊ KHOA HỌC',
+    conferenceTitle: 'VAGO ASIA 2025 - HỘI NGHỊ KHOA HỌC',
     address: 'Địa Chỉ: Xx Thành Phố Đà Nẵng, Việt Nam.',
     fax: 'Fax: +84.12345678',
     emailContact: 'Email: Abc@Gmail.Com'

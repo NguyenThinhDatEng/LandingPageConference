@@ -2,11 +2,11 @@
   <header class="header-bar flex flex-col item-center">
     <div class="topbar-background flex justify-center h-[var(--header-topbar-height)]">
       <div class="topbar container justify-between flex items-center">
-        <div class="logo-group flex items-center md:gap-4">
-          <img src="@/assets/imgs/logo/logo01.svg" alt="logo1" />
-          <img src="@/assets/imgs/logo/logo02.svg" alt="logo2" />
-          <img src="@/assets/imgs/logo/logo03.svg" alt="logo3" />
-          <img src="@/assets/imgs/logo/logo04.svg" alt="logo4" />
+        <div class="logo-group flex items-center">
+          <img src="@/assets/imgs/logo/logo1.png" alt="logo1" />
+          <img src="@/assets/imgs/logo/logo2.png" alt="logo2" />
+          <img src="@/assets/imgs/logo/logo3.jpg" alt="logo3" />
+          <img src="@/assets/imgs/logo/logo4.png" alt="logo4" />
         </div>
         <div class="topbar-right flex flex-1 items-center justify-end gap-4">
           <input
@@ -35,9 +35,9 @@
             @click="toggleMobileMenu" 
             :class="{ 'active': isMobileMenuOpen }"
           >
-            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-sm"></span>
-            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-sm"></span>
-            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-sm"></span>
+            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
+            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
+            <span class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
           </button>
         </div>
       </div>
@@ -45,16 +45,11 @@
 
     <!-- Desktop navbar -->
     <div class="navbar-background hidden md:flex justify-center h-[var(--header-navbar-height)]">
-      <nav class="navbar md:w-6xl">
-        <ul class="menu flex gap-12">
-          <li><a href="#banner">{{ $t('header.home') }}</a></li>
-          <li><a href="#intro">{{ $t('header.intro') }}</a></li>
-          <li><a href="#program">{{ $t('header.program') }}</a></li>
-          <li><a href="#partners">{{ $t('header.register') }}</a></li>
-          <li><a href="#services">{{ $t('header.services') }}</a></li>
-          <li><a href="#accommodation">{{ $t('header.accommodation') }}</a></li>
-          <li><a href="#activities">{{ $t('header.activities') }}</a></li>
-          <li><a href="#partners">{{ $t('header.partners') }}</a></li>
+      <nav class="navbar container md:w-6xl">
+        <ul class="menu flex gap-2 xl:gap-12">
+          <li v-for="item in menuItems" :key="item.key">
+            <a :href="item.href">{{ $t(item.translationKey) }}</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -63,14 +58,9 @@
     <div class="mobile-menu md:hidden" :class="{ 'open': isMobileMenuOpen }">
       <nav class="mobile-nav">
         <ul class="mobile-menu-list">
-          <li><a href="#banner" @click="closeMobileMenu">{{ $t('header.home') }}</a></li>
-          <li><a href="#intro" @click="closeMobileMenu">{{ $t('header.intro') }}</a></li>
-          <li><a href="#program" @click="closeMobileMenu">{{ $t('header.program') }}</a></li>
-          <li><a href="#partners" @click="closeMobileMenu">{{ $t('header.register') }}</a></li>
-          <li><a href="#services" @click="closeMobileMenu">{{ $t('header.services') }}</a></li>
-          <li><a href="#accommodation" @click="closeMobileMenu">{{ $t('header.accommodation') }}</a></li>
-          <li><a href="#activities" @click="closeMobileMenu">{{ $t('header.activities') }}</a></li>
-          <li><a href="#partners" @click="closeMobileMenu">{{ $t('header.partners') }}</a></li>
+          <li v-for="item in menuItems" :key="item.key">
+            <a :href="item.href" @click="closeMobileMenu">{{ $t(item.translationKey) }}</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -82,7 +72,17 @@ export default {
   name: "HeaderBar",
   data() {
     return {
-      isMobileMenuOpen: false
+      isMobileMenuOpen: false,
+      menuItems: [
+        { key: 'home', href: '#banner', translationKey: 'header.home' },
+        { key: 'intro', href: '#intro', translationKey: 'header.intro' },
+        { key: 'program', href: '#program', translationKey: 'header.program' },
+        { key: 'register', href: '#partners', translationKey: 'header.register' },
+        { key: 'services', href: '#services', translationKey: 'header.services' },
+        { key: 'accommodation', href: '#accommodation', translationKey: 'header.accommodation' },
+        { key: 'activities', href: '#activities', translationKey: 'header.activities' },
+        { key: 'partners', href: '#partners', translationKey: 'header.partners' }
+      ]
     };
   },
   computed: {
@@ -118,7 +118,7 @@ export default {
 
 .logo-group img {
   height: var(--header-topbar-height);
-  width: auto;
+  min-width: 156.44px;
   object-fit: contain;
   background: transparent;
   transition: height 0.2s;

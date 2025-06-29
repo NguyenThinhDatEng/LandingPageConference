@@ -1,6 +1,5 @@
 <template>
   <footer class="relative">
-    <!-- Contact Form Box -->
     <div
       class="form-register absolute -top-1/2 left-1/2 bg-yellow-500 w-11/12 md:w-6xl mx-auto rounded-none px-4 md:px-16 py-6 md:py-8 z-10">
       <h3 class="text-center text-xl md:text-2xl font-bold tracking-wide text-black mb-6 md:mb-8">
@@ -41,12 +40,11 @@
         </button>
       </form>
     </div>
-    <!-- Conference Info Section -->
     <div class="bg-[#0a3c86] text-white pt-72 pb-12 text-center">
       <div class="text-xl md:text-2xl font-bold mb-2 tracking-wide">{{ $t('footer.conferenceTitle') }}</div>
       <div class="text-sm md:text-base mb-1">{{ $t('footer.address') }}</div>
-      <div class="text-sm md:text-base mb-1">{{ $t('footer.fax') }}</div>
-      <div class="text-sm md:text-base mb-1">{{ $t('footer.emailContact') }}</div>
+      <div class="text-sm md:text-base mb-1">Fax: +84.12345678</div>
+      <div class="text-sm md:text-base mb-1">Email: Abc@Gmail.Com</div>
     </div>
   </footer>
 </template>

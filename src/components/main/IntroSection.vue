@@ -18,7 +18,7 @@
         <div class="flex justify-center md:justify-start">
           <button
             class="w-fit h-fit bg-gray-300 text-gray-900 border-none rounded-md px-6 sm:px-7 py-2.5 text-sm sm:text-base font-semibold cursor-pointer shadow-md transition-colors duration-200 hover:bg-blue-900 hover:text-white">
-            {{ $t('intro.viewDetail') }}
+            {{ $t('common.viewDetail') }}
           </button>
         </div>
       </div>
