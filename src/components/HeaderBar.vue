@@ -8,7 +8,7 @@
           <img src="@/assets/imgs/logo/logo03.svg" alt="logo3" />
           <img src="@/assets/imgs/logo/logo04.svg" alt="logo4" />
         </div>
-        <div class="topbar-right flex items-center gap-4">
+        <div class="topbar-right flex flex-1 items-center justify-end gap-4">
           <input
             class="search-input hidden md:flex flex-1 max-w-[480px] min-w-[320px] bg-[#eeaa2c] border-none rounded-md px-7 py-3.5 text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
             placeholder="Tìm Kiếm Thông Tin ...." />
