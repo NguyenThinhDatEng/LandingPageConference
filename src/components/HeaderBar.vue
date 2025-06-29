@@ -4,10 +4,14 @@
       <div class="topbar container flex flex-col-reverse md:flex-row md:justify-between md:items-center">
         <!-- Logo group - full width on mobile, flex-1 on desktop -->
         <div class="logo-group flex justify-center md:justify-start md:flex-1 items-center">
-          <img src="@/assets/imgs/logo/logo1.png" alt="logo1" class="w-1/4 md:w-[156.44px]" />
-          <img src="@/assets/imgs/logo/logo2.png" alt="logo2" class="w-1/4 md:w-[156.44px]" />
-          <img src="@/assets/imgs/logo/logo3.jpg" alt="logo3" class="w-1/4 md:w-[156.44px]" />
-          <img src="@/assets/imgs/logo/logo4.png" alt="logo4" class="w-1/4 md:w-[156.44px]" />
+          <LazyImage 
+            v-for="(logo, index) in logos" 
+            :key="index"
+            :src="logo.src" 
+            :alt="logo.alt"
+            image-class="w-1/4 md:w-[156.44px]"
+            :placeholder-style="{ width: '25%', height: 'var(--header-topbar-height)' }"
+          />
         </div>
 
         <!-- Topbar right - full width on mobile, flex items on desktop -->
@@ -68,11 +72,27 @@
 </template>
 
 <script>
+import LazyImage from './LazyImage.vue'
+// Import logo images using ES6 imports
+import logo1Img from '@/assets/imgs/logo/logo1.png'
+import logo2Img from '@/assets/imgs/logo/logo2.png'
+import logo3Img from '@/assets/imgs/logo/logo3.jpg'
+import logo4Img from '@/assets/imgs/logo/logo4.png'
+
 export default {
   name: "HeaderBar",
+  components: {
+    LazyImage
+  },
   data() {
     return {
       isMobileMenuOpen: false,
+      logos: [
+        { src: logo1Img, alt: 'logo1' },
+        { src: logo2Img, alt: 'logo2' },
+        { src: logo3Img, alt: 'logo3' },
+        { src: logo4Img, alt: 'logo4' }
+      ],
       menuItems: [
         { key: 'home', href: '#banner', translationKey: 'header.home' },
         { key: 'intro', href: '#intro', translationKey: 'header.intro' },

@@ -12,8 +12,21 @@
 </template>
 
 <script>
+import { useImagePreloader } from '@/composables/useImagePreloader'
+// Import image using ES6 import
+import bannerImg from '@/assets/imgs/Banner.jpg'
+
 export default {
-  name: 'HeroSection'
+  name: 'HeroSection',
+  async mounted() {
+    // Preload hero background image
+    const { preloadImage } = useImagePreloader()
+    try {
+      await preloadImage(bannerImg)
+    } catch (error) {
+      console.error('Failed to preload hero background:', error)
+    }
+  }
 }
 </script>
 
@@ -27,6 +40,8 @@ export default {
   background: linear-gradient(to right, rgba(0,63,145,0.6) 60%, rgba(0,63,145,0.1) 100%), url('@/assets/imgs/Banner.jpg') center/cover no-repeat;
   aspect-ratio: 5 / 2;
   color: #fff;
+  /* Add loading state */
+  background-color: #f0f0f0;
 }
 .hero-content {
   z-index: 1;

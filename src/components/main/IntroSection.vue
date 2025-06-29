@@ -3,10 +3,11 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mx-auto">
       <!-- Image container -->
       <div class="w-full">
-        <img 
-          src="@/assets/imgs/intro/intro.jpg" 
+        <LazyImage 
+          :src="introImageUrl" 
           alt="Giới thiệu"
-          class="rounded-md shadow-lg object-cover w-full h-48 sm:h-64 md:h-auto md:max-h-96" 
+          image-class="rounded-md shadow-lg object-cover w-full h-48 sm:h-64 md:h-auto md:max-h-96"
+          :placeholder-style="{ width: '100%', height: '192px' }"
         />
       </div>
       
@@ -28,11 +29,18 @@
 
 <script>
 import SectionContainer from '@/components/SectionContainer.vue'
+import LazyImage from '@/components/LazyImage.vue'
 
 export default {
   name: 'AboutSection',
   components: {
-    SectionContainer
+    SectionContainer,
+    LazyImage
+  },
+  computed: {
+    introImageUrl() {
+      return new URL('@/assets/imgs/intro/intro.jpg', import.meta.url).href
+    }
   }
 }
 </script>

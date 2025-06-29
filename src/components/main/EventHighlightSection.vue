@@ -3,7 +3,12 @@
     <div class="event-list grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 justify-items-center">
       <div v-for="(item, idx) in events" :key="idx"
         class="event-card bg-white rounded-md border border-gray-200 shadow-sm w-full max-w-[292px] flex flex-col items-center pb-5 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 hover:scale-105">
-        <img :src="item.img" alt="event" class="w-full h-48 object-cover rounded-t-lg border-b border-gray-200" />
+        <LazyImage 
+          :src="item.img" 
+          alt="event" 
+          image-class="w-full h-48 object-cover rounded-t-lg border-b border-gray-200"
+          :placeholder-style="{ width: '100%', height: '192px' }"
+        />
         <div
           class="event-title text-lg font-bold text-gray-800 my-4 text-left min-h-12 w-11/12 flex items-center justify-start">
           {{ $t(item.titleKey) }}
@@ -20,11 +25,13 @@
 <script>
 import SectionContainer from '@/components/SectionContainer.vue'
 import event from '@/assets/imgs/outstandingEvent/event.jpg'
+import LazyImage from '@/components/LazyImage.vue'
 
 export default {
   name: 'EventHighlightSection',
   components: {
-    SectionContainer
+    SectionContainer,
+    LazyImage
   },
   data() {
     return {
