@@ -19,7 +19,7 @@
     <!-- Desktop: Original 3-column grid layout -->
     <div class="hidden md:grid md:grid-cols-3 gap-8">
       <div class="flex flex-col items-start h-full justify-between" v-for="(col, colIdx) in columns" :key="colIdx">
-        <div class="text-lg font-bold text-gray-900 mb-8">{{ col.title }}</div>
+        <div class="text-lg md:text-xl font-bold text-gray-900 mb-8">{{ col.title }}</div>
         <div class="flex flex-col gap-4">
           <div class="flex gap-4" v-for="(item, idx) in col.items" :key="idx">
             <img :src="item.img" alt="info" class="w-[120px] h-[70px] object-cover rounded-md" />
