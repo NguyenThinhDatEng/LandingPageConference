@@ -40,7 +40,7 @@
         </button>
       </form>
     </div>
-    <div class="bg-[#0a3c86] text-white pt-72 pb-12 text-center">
+    <div class="bg-[#0a3c86] text-white pt-82 md:pt-72 pb-12 text-center">
       <div class="text-xl md:text-2xl font-bold mb-2 tracking-wide">{{ $t('footer.conferenceTitle') }}</div>
       <div class="text-sm md:text-base mb-1">{{ $t('footer.address') }}</div>
       <div class="text-sm md:text-base mb-1">Fax: +84.12345678</div>
