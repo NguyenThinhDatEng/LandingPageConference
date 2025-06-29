@@ -1,5 +1,5 @@
 <template>
-  <SectionContainer title="HÌNH ẢNH HOẠT ĐỘNG TIÊU BIỂU" section-id="activities" is-full-width>
+  <SectionContainer :title="$t('activities.title')" section-id="activities" is-full-width>
     <div class="flex flex-col gap-4">
       <div class="flex gap-4 w-full justify-center">
         <img :src="imgs[0]" alt="activity" class="w-full object-cover rounded-lg" />

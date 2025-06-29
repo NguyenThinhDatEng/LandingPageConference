@@ -11,11 +11,23 @@
         <div class="topbar-right flex flex-1 items-center justify-end gap-4">
           <input
             class="search-input hidden md:flex flex-1 max-w-[480px] min-w-[320px] bg-[#eeaa2c] border-none rounded-md px-7 py-3.5 text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
-            placeholder="Tìm Kiếm Thông Tin ...." />
+            :placeholder="$t('header.search')" />
           <div class="lang-switch">
-            <span class="lang active">VN</span>
+            <span 
+              class="lang" 
+              :class="{ 'active': currentLocale === 'vi' }"
+              @click="changeLocale('vi')"
+            >
+              VN
+            </span>
             <span class="divider">|</span>
-            <span class="lang">ENG</span>
+            <span 
+              class="lang" 
+              :class="{ 'active': currentLocale === 'en' }"
+              @click="changeLocale('en')"
+            >
+              ENG
+            </span>
           </div>
           <!-- Mobile menu icon -->
           <button 
@@ -35,14 +47,14 @@
     <div class="navbar-background hidden md:flex justify-center h-[var(--header-navbar-height)]">
       <nav class="navbar md:w-6xl">
         <ul class="menu flex gap-12">
-          <li><a href="#banner">Trang Chủ</a></li>
-          <li><a href="#intro">Giới Thiệu</a></li>
-          <li><a href="#program">Chương Trình</a></li>
-          <li><a href="#partners">Đăng ký</a></li>
-          <li><a href="#services">Dịch vụ</a></li>
-          <li><a href="#accommodation">Lưu Trú</a></li>
-          <li><a href="#activities">Hoạt động</a></li>
-          <li><a href="#partners">Đối tác</a></li>
+          <li><a href="#banner">{{ $t('header.home') }}</a></li>
+          <li><a href="#intro">{{ $t('header.intro') }}</a></li>
+          <li><a href="#program">{{ $t('header.program') }}</a></li>
+          <li><a href="#partners">{{ $t('header.register') }}</a></li>
+          <li><a href="#services">{{ $t('header.services') }}</a></li>
+          <li><a href="#accommodation">{{ $t('header.accommodation') }}</a></li>
+          <li><a href="#activities">{{ $t('header.activities') }}</a></li>
+          <li><a href="#partners">{{ $t('header.partners') }}</a></li>
         </ul>
       </nav>
     </div>
@@ -51,14 +63,14 @@
     <div class="mobile-menu md:hidden" :class="{ 'open': isMobileMenuOpen }">
       <nav class="mobile-nav">
         <ul class="mobile-menu-list">
-          <li><a href="#banner" @click="closeMobileMenu">Trang Chủ</a></li>
-          <li><a href="#intro" @click="closeMobileMenu">Giới Thiệu</a></li>
-          <li><a href="#program" @click="closeMobileMenu">Chương Trình</a></li>
-          <li><a href="#partners" @click="closeMobileMenu">Đăng ký</a></li>
-          <li><a href="#services" @click="closeMobileMenu">Dịch vụ</a></li>
-          <li><a href="#accommodation" @click="closeMobileMenu">Lưu Trú</a></li>
-          <li><a href="#activities" @click="closeMobileMenu">Hoạt động</a></li>
-          <li><a href="#partners" @click="closeMobileMenu">Đối tác</a></li>
+          <li><a href="#banner" @click="closeMobileMenu">{{ $t('header.home') }}</a></li>
+          <li><a href="#intro" @click="closeMobileMenu">{{ $t('header.intro') }}</a></li>
+          <li><a href="#program" @click="closeMobileMenu">{{ $t('header.program') }}</a></li>
+          <li><a href="#partners" @click="closeMobileMenu">{{ $t('header.register') }}</a></li>
+          <li><a href="#services" @click="closeMobileMenu">{{ $t('header.services') }}</a></li>
+          <li><a href="#accommodation" @click="closeMobileMenu">{{ $t('header.accommodation') }}</a></li>
+          <li><a href="#activities" @click="closeMobileMenu">{{ $t('header.activities') }}</a></li>
+          <li><a href="#partners" @click="closeMobileMenu">{{ $t('header.partners') }}</a></li>
         </ul>
       </nav>
     </div>
@@ -73,12 +85,21 @@ export default {
       isMobileMenuOpen: false
     };
   },
+  computed: {
+    currentLocale() {
+      return this.$i18n.locale
+    }
+  },
   methods: {
     toggleMobileMenu() {
       this.isMobileMenuOpen = !this.isMobileMenuOpen;
     },
     closeMobileMenu() {
       this.isMobileMenuOpen = false;
+    },
+    changeLocale(locale) {
+      this.$i18n.locale = locale
+      localStorage.setItem('locale', locale)
     }
   }
 };

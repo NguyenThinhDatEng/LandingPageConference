@@ -1,11 +1,11 @@
 <template>
   <section class="hero scroll-mt-[var(--top-scroll)]" id="banner">
     <div class="hero-content">
-      <h1>ECHO ASIA 2025<br />3RD VSCI CONGRESS 2025</h1>
+      <h1>{{ $t('hero.title') }}<br />{{ $t('hero.subtitle') }}</h1>
       <div class="subtitle">
-        HỘI NGHỊ KHOA HỌC<br />
-        HIỆP HỘI SIÊU ÂM TIM CHÂU Á THÁI BÌNH DƯƠNG NĂM 2025<br />
-        HÌNH ẢNH TIM MẠCH VIỆT NAM LẦN THỨ 3
+        {{ $t('hero.description') }}<br />
+        {{ $t('hero.description2') }}<br />
+        {{ $t('hero.description3') }}
       </div>
     </div>
   </section>

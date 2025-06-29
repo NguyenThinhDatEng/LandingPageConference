@@ -1,16 +1,16 @@
 <template>
-  <SectionFull class="event-highlight-section" title="CHƯƠNG TRÌNH SỰ KIỆN NỔI BẬT" section-id="program">
+  <SectionFull class="event-highlight-section" :title="$t('eventHighlight.title')" section-id="program">
     <div class="event-list grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 justify-items-center">
       <div v-for="(item, idx) in events" :key="idx"
         class="event-card bg-white rounded-lg border border-gray-200 shadow-sm w-full max-w-[292px] flex flex-col items-center pb-5 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 hover:scale-105">
         <img :src="item.img" alt="event" class="w-full h-48 object-cover rounded-t-lg border-b border-gray-200" />
         <div
           class="event-title text-lg font-bold text-gray-800 my-4 text-left min-h-12 w-11/12 flex items-center justify-start">
-          {{ item.title }}
+          {{ $t(item.titleKey) }}
         </div>
         <button
           class="event-btn bg-gray-200 text-gray-800 border-none rounded-md px-6 py-1.5 text-base font-semibold cursor-pointer mt-1 shadow-sm transition-colors duration-200 hover:bg-blue-900 hover:text-white">
-          Chi Tiết
+          {{ $t('common.detail') }}
         </button>
       </div>
     </div>
@@ -31,19 +31,19 @@ export default {
       events: [
         {
           img: cityWithBeach,
-          title: 'Danh Bạ Doanh Nghiệp Xuất Khẩu Indonesia'
+          titleKey: 'eventHighlight.highlights.0'
         },
         {
           img: cityWithBeach,
-          title: 'Danh Bạ Doanh Nghiệp Nhập Khẩu Indonesia'
+          titleKey: 'eventHighlight.highlights.1'
         },
         {
           img: cityWithBeach,
-          title: 'Danh Bạ Doanh Nghiệp Xuất Khẩu Việt Nam'
+          titleKey: 'eventHighlight.highlights.2'
         },
         {
           img: cityWithBeach,
-          title: 'Danh Bạ Doanh Nghiệp Nhập Khẩu Việt Nam'
+          titleKey: 'eventHighlight.highlights.3'
         }
       ]
     }
