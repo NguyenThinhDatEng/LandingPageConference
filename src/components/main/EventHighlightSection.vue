@@ -1,6 +1,6 @@
 <template>
   <SectionFull class="event-highlight-section" title="CHƯƠNG TRÌNH SỰ KIỆN NỔI BẬT" section-id="program">
-    <div class="event-list grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
+    <div class="event-list grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 justify-items-center">
       <div v-for="(item, idx) in events" :key="idx"
         class="event-card bg-white rounded-lg border border-gray-200 shadow-sm w-full max-w-[292px] flex flex-col items-center pb-5 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 hover:scale-105">
         <img :src="item.img" alt="event" class="w-full h-48 object-cover rounded-t-lg border-b border-gray-200" />

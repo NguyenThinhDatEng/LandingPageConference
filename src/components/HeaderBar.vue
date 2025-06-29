@@ -167,11 +167,7 @@ export default {
 }
 
 .mobile-menu.open {
-  max-height: 400px;
-}
-
-.mobile-nav {
-  padding: 1rem 0;
+  max-height: 100vh;
 }
 
 .mobile-menu-list {

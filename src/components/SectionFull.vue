@@ -7,7 +7,7 @@
         >
           {{ title }}
         </h2>
-        <div class="container-background w-full flex justify-center md:py-8">
+        <div class="container-background w-full flex justify-center py-4 md:py-8">
           <div class="md:max-w-6xl">
             <slot></slot>
           </div>
