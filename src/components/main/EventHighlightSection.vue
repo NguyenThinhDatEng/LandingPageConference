@@ -19,7 +19,10 @@
 
 <script>
 import SectionContainer from '@/components/SectionContainer.vue'
-import event from '@/assets/imgs/outstandingEvent/event.jpg'
+import event01 from '@/assets/imgs/outstandingEvent/event01.jpg'
+import event02 from '@/assets/imgs/outstandingEvent/event02.jpg'
+import event03 from '@/assets/imgs/outstandingEvent/event03.png'
+import event04 from '@/assets/imgs/outstandingEvent/event04.jpg'
 
 export default {
   name: 'EventHighlightSection',
@@ -30,19 +33,19 @@ export default {
     return {
       events: [
         {
-          img: event,
+          img: event04,
           titleKey: 'eventHighlight.highlights.0'
         },
         {
-          img: event,
+          img: event01,
           titleKey: 'eventHighlight.highlights.1'
         },
         {
-          img: event,
+          img: event02,
           titleKey: 'eventHighlight.highlights.2'
         },
         {
-          img: event,
+          img: event03,
           titleKey: 'eventHighlight.highlights.3'
         }
       ]

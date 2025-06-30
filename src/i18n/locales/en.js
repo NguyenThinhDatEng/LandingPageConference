@@ -19,10 +19,10 @@ export default {
   
   // Hero Section
   hero: {
-    title: 'VAGO ASIA 2025',
-    subtitle: '3RD VSCI CONGRESS 2025',
-    description: 'SCIENTIFIC CONFERENCE',
-    description2: 'ASIA PACIFIC ECHOCARDIOGRAPHY SOCIETY 2025',
+    title: 'VAGO 2025',
+    subtitle: '12th Extended Session',
+    description: 'The Obstetrics and Gynecology Conference of Central Vietnam - Tay Nguyen',
+    description2: '12th Edition of the Expansion in 2025',
     description3: 'VIETNAM CARDIOVASCULAR IMAGING 3RD TIME'
   },
   
@@ -121,8 +121,8 @@ export default {
     content: 'CONTENT',
     details: 'DETAILS',
     sendInfo: 'SEND INFORMATION',
-    conferenceTitle: 'VAGO ASIA 2025 - SCIENTIFIC CONFERENCE',
-    address: 'Address: Xx Da Nang City, Vietnam.',
+    conferenceTitle: 'VAGO 2025 - SCIENTIFIC CONFERENCE',
+    address: 'Address: Xx Hue City, Vietnam.',
     fax: 'Fax: +84.12345678',
     emailContact: 'Email: Abc@Gmail.Com'
   }

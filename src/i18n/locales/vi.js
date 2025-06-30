@@ -19,10 +19,10 @@ export default {
   
   // Hero Section
   hero: {
-    title: 'VAGO ASIA 2025',
-    subtitle: '3RD VSCI CONGRESS 2025',
-    description: 'HỘI NGHỊ KHOA HỌC',
-    description2: 'HIỆP HỘI SIÊU ÂM TIM CHÂU Á THÁI BÌNH DƯƠNG NĂM 2025',
+    title: 'VAGO 2025',
+    subtitle: '12th Extended Session',
+    description: 'HỘI NGHỊ PHỤ SẢN MIỀN TRUNG – TÂY NGUYÊN',
+    description2: 'MỞ RỘNG LẦN THỨ XII – NĂM 2025',
     description3: 'HÌNH ẢNH TIM MẠCH VIỆT NAM LẦN THỨ 3'
   },
   
@@ -121,8 +121,8 @@ export default {
     content: 'NỘI DUNG',
     details: 'CHI TIẾT',
     sendInfo: 'GỬI THÔNG TIN',
-    conferenceTitle: 'VAGO ASIA 2025 - HỘI NGHỊ KHOA HỌC',
-    address: 'Địa Chỉ: Xx Thành Phố Đà Nẵng, Việt Nam.',
+    conferenceTitle: 'VAGO 2025 - HỘI NGHỊ KHOA HỌC',
+    address: 'Địa Chỉ: Xx Thành Phố Huế, Việt Nam.',
     fax: 'Fax: +84.12345678',
     emailContact: 'Email: Abc@Gmail.Com'
   }
