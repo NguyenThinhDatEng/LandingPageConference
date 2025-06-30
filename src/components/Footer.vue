@@ -17,7 +17,7 @@
           <input type="text" :placeholder="$t('footer.content')" required
             class="w-full px-4 py-3 border-none rounded-md text-base bg-white text-black" />
         </div>
-        
+
         <!-- Desktop: Two column layout -->
         <div class="hidden md:flex md:gap-4">
           <input type="text" :placeholder="$t('footer.name')" required
@@ -31,7 +31,7 @@
           <input type="text" :placeholder="$t('footer.content')" required
             class="flex-1 px-4 py-3 border-none rounded-md text-base bg-white text-black" />
         </div>
-        
+
         <textarea :placeholder="$t('footer.details')" rows="3"
           class="w-full border-none rounded-md px-4 py-3 text-base resize-y min-h-12 bg-white text-black"></textarea>
         <button type="submit"
@@ -48,21 +48,21 @@
           <div class="text-sm leading-relaxed">{{ $t('footer.contactOrg') }}</div>
           <div class="text-sm leading-relaxed">{{ $t('footer.contactAddress') }}</div>
           <div class="text-sm leading-relaxed">Điện thoại: {{ $t('footer.contactPhone') }}</div>
-          <div class="text-sm leading-relaxed">Email: {{ $t('footer.contactEmail') }}</div>
+          <div class="text-sm leading-relaxed">Email: vago.mientrung@gmail.com</div>
         </div>
         <!-- Cột 2 -->
         <div>
           <div class="font-bold uppercase mb-2">{{ $t('footer.coordinatorTitle') }}</div>
           <div class="text-sm leading-relaxed">{{ $t('footer.coordinatorName') }}</div>
-          <div class="text-sm leading-relaxed">SĐT: {{ $t('footer.coordinatorPhone') }}</div>
-          <div class="text-sm leading-relaxed">Email: {{ $t('footer.coordinatorEmail') }}</div>
+          <div class="text-sm leading-relaxed">{{ $t('common.phone') }}: {{ $t('footer.coordinatorPhone') }}</div>
+          <div class="text-sm leading-relaxed">Email: leminhtam.med@gmail.com</div>
         </div>
         <!-- Cột 3 -->
         <div>
           <div class="font-bold uppercase mb-2">{{ $t('footer.secretaryTitle') }}</div>
           <div class="text-sm leading-relaxed">{{ $t('footer.secretaryName') }}</div>
-          <div class="text-sm leading-relaxed">SĐT: {{ $t('footer.secretaryPhone') }}</div>
-          <div class="text-sm leading-relaxed">Email: {{ $t('footer.secretaryEmail') }}</div>
+          <div class="text-sm leading-relaxed">{{ $t('common.phone') }}: 0903 522 510</div>
+          <div class="text-sm leading-relaxed">Email: vovankhoa@huemed-univ.edu.vn</div>
         </div>
       </div>
     </div>

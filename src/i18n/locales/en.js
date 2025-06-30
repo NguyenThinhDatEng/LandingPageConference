@@ -3,6 +3,7 @@ export default {
     viewDetail: 'View Detail',
     detail: 'Detail',
     viewMore: 'View More',
+    phone: 'Phone'
   },
   // Header
   header: {
@@ -52,7 +53,7 @@ export default {
   intro: {
     title: 'INTRODUCTION',
     subtitle: 'INTERNATIONAL SCIENTIFIC CONFERENCE',
-    description: 'International scientific conference on echocardiography and cardiovascular imaging',
+    description: 'International Scientific Conference on Obstetrics and Gynecology',
     content: 'The Vietnam Trade Office in Indonesia is an agency under the Ministry of Industry and Trade of Vietnam, playing a key role in promoting economic and trade relations between Vietnam and Indonesia. Located in Jakarta, the Trade Office is tasked with market research, trade promotion, business support for both countries, state management of trade, and strengthening bilateral economic cooperation. It serves as an important bridge helping Vietnamese enterprises access the Indonesian market and vice versa.'
   },
 
@@ -62,7 +63,7 @@ export default {
     subtitle: 'SPECIAL PROGRAM',
     description: 'Discover the highlights of the conference',
     highlights: [
-      'In-depth echocardiography workshops',
+      'Advanced Workshop on Obstetrics and Gynecology',
       'Latest medical technology exhibition',
       'Networking with international experts',
       'Conference attendance certification'

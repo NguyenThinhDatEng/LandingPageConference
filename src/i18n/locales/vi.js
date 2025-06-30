@@ -3,6 +3,7 @@ export default {
     viewDetail: 'Xem Chi Tiết',
     detail: 'Chi Tiết',
     viewMore: 'Xem Thêm',
+    phone: 'SĐT'
   },
   // Header
   header: {
@@ -52,7 +53,7 @@ export default {
   intro: {
     title: 'GIỚI THIỆU',
     subtitle: 'HỘI NGHỊ KHOA HỌC QUỐC TẾ',
-    description: 'Hội nghị khoa học quốc tế về siêu âm tim và hình ảnh tim mạch',
+    description: 'Hội nghị khoa học quốc tế về phụ sản',
     content: 'Thương Vụ Việt Nam Tại Indonesia Là Cơ Quan Của Bộ Công Thương Việt Nam, Đóng Vai Trò Then Chốt Trong Việc Thúc Đẩy Quan Hệ Kinh Tế, Thương Mại Giữa Việt Nam Và Indonesia. Đặt Tại Jakarta, Thương Vụ Có Nhiệm Vụ Nghiên Cứu Thị Trường, Xúc Tiến Thương Mại, Hỗ Trợ Doanh Nghiệp Hai Nước, Quản Lý Nhà Nước Về Thương Mại Và Tăng Cường Hợp Tác Kinh Tế Song Phương. Đây Là Cầu Nối Quan Trọng Giúp Doanh Nghiệp Việt Nam Tiếp Cận Thị Trường Indonesia Và Ngược Lại.'
   },
 
@@ -62,7 +63,7 @@ export default {
     subtitle: 'CHƯƠNG TRÌNH ĐẶC BIỆT',
     description: 'Khám phá những điểm nổi bật của hội nghị',
     highlights: [
-      'Hội thảo chuyên sâu về siêu âm tim',
+      'Hội thảo chuyên sâu về phụ sản',
       'Triển lãm công nghệ y tế mới nhất',
       'Giao lưu với chuyên gia quốc tế',
       'Chứng nhận tham dự hội nghị'
