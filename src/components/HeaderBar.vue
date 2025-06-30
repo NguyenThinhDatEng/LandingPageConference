@@ -1,20 +1,17 @@
 <template>
-  <header class="header-bar flex flex-col item-center">
+  <header class="header-bar flex flex-col item-center px-2 md:px-0">
     <div class="topbar-background flex justify-center">
-      <div class="topbar container flex flex-col-reverse md:flex-row md:justify-between md:items-center">
+      <div class="topbar container flex md:justify-between md:items-center">
         <!-- Logo group - full width on mobile, flex-1 on desktop -->
-        <div class="logo-group flex justify-center md:justify-start md:flex-1 items-center">
-          <img src="@/assets/imgs/logo/logo1.png" alt="logo1" class="w-1/4 md:w-[156.44px]" />
-          <img src="@/assets/imgs/logo/logo2.png" alt="logo2" class="w-1/4 md:w-[156.44px]" />
-          <img src="@/assets/imgs/logo/logo3.jpg" alt="logo3" class="w-1/4 md:w-[156.44px]" />
-          <img src="@/assets/imgs/logo/logo4.png" alt="logo4" class="w-1/4 md:w-[156.44px]" />
+        <div class="logo-group flex justify-center justify-start flex-1 items-center">
+          <img src="@/assets/imgs/logo/VAGO.png" alt="VAGO logo"/>
         </div>
 
         <!-- Topbar right - full width on mobile, flex items on desktop -->
         <div
-          class="topbar-right flex md:flex-row items-center justify-end gap-4 py-2 md:py-0 px-2 md:px-0">
+          class="topbar-right flex md:flex-row items-center justify-end gap-4 py-2 md:py-0">
           <input
-            class="search-input md:flex flex-1 max-w-[480px] xl:min-w-[480px] bg-[#eeaa2c] border-none rounded-md px-2 md:px-6 py-3.5 text-xs md:text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
+            class="search-input hidden sm:flex flex-1 max-w-[480px] xl:min-w-[480px] bg-[#eeaa2c] border-none rounded-md px-2 md:px-6 py-3.5 text-xs md:text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
             :placeholder="$t('header.search')" />
 
           <div class="flex items-center gap-4">
