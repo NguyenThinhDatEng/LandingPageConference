@@ -7,6 +7,7 @@
           src="@/assets/imgs/intro/intro.jpg" 
           alt="Giới thiệu"
           class="rounded-md shadow-lg object-cover w-full h-48 sm:h-64 md:h-auto md:max-h-96" 
+          loading="lazy"
         />
       </div>
       

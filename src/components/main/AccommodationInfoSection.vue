@@ -6,7 +6,7 @@
         <div class="text-base font-bold text-gray-900 mb-4">{{ $t(col.titleKey) }}</div>
         <div class="flex flex-col gap-3 w-full">
           <div class="flex gap-3" v-for="(item, idx) in col.items" :key="idx">
-            <img :src="item.img" alt="info" class="w-20 h-16 object-cover rounded-md flex-shrink-0" />
+            <img :src="item.img" alt="info" class="w-20 h-16 object-cover rounded-md flex-shrink-0" loading="lazy" />
             <div class="item-title text-gray-900 font-bold text-sm leading-tight flex-1">{{ $t(item.titleKey) }}</div>
           </div>
           <div class="text-sm text-center text-gray-800 italic underline cursor-pointer hover:text-blue-800 transition-colors duration-200 mt-2">
@@ -22,7 +22,7 @@
         <div class="text-lg md:text-xl font-bold text-gray-900 mb-8">{{ $t(col.titleKey) }}</div>
         <div class="flex flex-col gap-4">
           <div class="flex gap-4" v-for="(item, idx) in col.items" :key="idx">
-            <img :src="item.img" alt="info" class="w-[120px] h-[70px] object-cover rounded-md" />
+            <img :src="item.img" alt="info" class="w-[120px] h-[70px] object-cover rounded-md" loading="lazy" />
             <div class="item-title text-gray-900 font-bold">{{ $t(item.titleKey) }}</div>
           </div>
           <div class="text-base text-center text-gray-800 italic underline cursor-pointer hover:text-blue-800 transition-colors duration-200">

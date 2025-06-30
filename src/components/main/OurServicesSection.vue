@@ -6,7 +6,7 @@
       <div
         class="flex items-start bg-white rounded-md shadow-sm border-[1.5px] border-gray-200 p-3 gap-3"
         v-for="(item, idx) in smallCards" :key="idx">
-        <img :src="item.img" alt="service" class="w-20 h-16 object-cover rounded-md flex-shrink-0" />
+        <img :src="item.img" alt="service" class="w-20 h-16 object-cover rounded-md flex-shrink-0" loading="lazy" />
         <div class="flex flex-col justify-center gap-1 min-w-0">
           <div class="text-sm font-bold text-gray-900 leading-tight">{{ $t(item.titleKey) }}</div>
           <div class="text-xs text-gray-600 font-normal leading-tight">{{ $t(item.descKey) }}</div>
@@ -33,7 +33,7 @@
         <div
           class="flex items-start bg-white rounded-md shadow-sm border-[1.5px] border-gray-200 p-3 pl-4 gap-[18px] min-h-[90px]"
           v-for="(item, idx) in smallCards" :key="idx">
-          <img :src="item.img" alt="service" class="w-[110px] h-[70px] object-cover rounded-md" />
+          <img :src="item.img" alt="service" class="w-[110px] h-[70px] object-cover rounded-md" loading="lazy" />
           <div class="flex flex-col justify-center gap-[6px]">
             <div class="text-base font-bold text-gray-900">{{ $t(item.titleKey) }}</div>
             <div class="text-xs text-gray-600 font-normal">{{ $t(item.descKey) }}</div>
