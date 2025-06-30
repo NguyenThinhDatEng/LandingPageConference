@@ -121,9 +121,18 @@ export default {
     content: 'CONTENT',
     details: 'DETAILS',
     sendInfo: 'SEND INFORMATION',
-    conferenceTitle: 'VAGO 2025 - SCIENTIFIC CONFERENCE',
-    address: 'Address: Xx Hue City, Vietnam.',
-    fax: 'Fax: +84.12345678',
-    emailContact: 'Email: Abc@Gmail.Com'
+    contactTitle: 'CONTACT INFORMATION',
+    contactOrg: 'Vietnam Association of Obstetricians and Gynecologists – Central Office',
+    contactAddress: 'Hue University of Medicine and Pharmacy, 06 Ngo Quyen, Hue City',
+    contactPhone: '0989 228 779',
+    contactEmail: 'vago.mientrung@gmail.com',
+    coordinatorTitle: 'CONFERENCE COORDINATOR',
+    coordinatorName: 'Assoc. Prof. Dr. Le Minh Tam',
+    coordinatorPhone: '0989 228 779',
+    coordinatorEmail: 'leminhtam.med@gmail.com',
+    secretaryTitle: 'CONFERENCE SECRETARY',
+    secretaryName: 'MSc. Dr. Vo Van Khoa',
+    secretaryPhone: '0903 522 510',
+    secretaryEmail: 'vovankhoa@huemed-univ.edu.vn'
   }
-} 
+}

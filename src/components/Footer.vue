@@ -40,11 +40,31 @@
         </button>
       </form>
     </div>
-    <div class="bg-[#0a3c86] text-white pt-82 md:pt-72 pb-12 text-center">
-      <div class="text-xl md:text-2xl font-bold mb-2 tracking-wide">{{ $t('footer.conferenceTitle') }}</div>
-      <div class="text-sm md:text-base mb-1">{{ $t('footer.address') }}</div>
-      <div class="text-sm md:text-base mb-1">Fax: +84.12345678</div>
-      <div class="text-sm md:text-base mb-1">Email: Abc@Gmail.Com</div>
+    <div class="flex justify-center bg-[#0a3c86] text-white pt-82 md:pt-72 pb-12 text-center px-2 md:px-0">
+      <div class="container grid grid-cols-1 md:grid-cols-4 gap-6 text-left md:max-w-6xl">
+        <!-- Cột 1 -->
+        <div class="sm:col-span-2">
+          <div class="font-bold uppercase mb-2">{{ $t('footer.contactTitle') }}</div>
+          <div class="text-sm leading-relaxed">{{ $t('footer.contactOrg') }}</div>
+          <div class="text-sm leading-relaxed">{{ $t('footer.contactAddress') }}</div>
+          <div class="text-sm leading-relaxed">Điện thoại: {{ $t('footer.contactPhone') }}</div>
+          <div class="text-sm leading-relaxed">Email: {{ $t('footer.contactEmail') }}</div>
+        </div>
+        <!-- Cột 2 -->
+        <div>
+          <div class="font-bold uppercase mb-2">{{ $t('footer.coordinatorTitle') }}</div>
+          <div class="text-sm leading-relaxed">{{ $t('footer.coordinatorName') }}</div>
+          <div class="text-sm leading-relaxed">SĐT: {{ $t('footer.coordinatorPhone') }}</div>
+          <div class="text-sm leading-relaxed">Email: {{ $t('footer.coordinatorEmail') }}</div>
+        </div>
+        <!-- Cột 3 -->
+        <div>
+          <div class="font-bold uppercase mb-2">{{ $t('footer.secretaryTitle') }}</div>
+          <div class="text-sm leading-relaxed">{{ $t('footer.secretaryName') }}</div>
+          <div class="text-sm leading-relaxed">SĐT: {{ $t('footer.secretaryPhone') }}</div>
+          <div class="text-sm leading-relaxed">Email: {{ $t('footer.secretaryEmail') }}</div>
+        </div>
+      </div>
     </div>
   </footer>
 </template>

@@ -121,9 +121,18 @@ export default {
     content: 'NỘI DUNG',
     details: 'CHI TIẾT',
     sendInfo: 'GỬI THÔNG TIN',
-    conferenceTitle: 'VAGO 2025 - HỘI NGHỊ KHOA HỌC',
-    address: 'Địa Chỉ: Xx Thành Phố Huế, Việt Nam.',
-    fax: 'Fax: +84.12345678',
-    emailContact: 'Email: Abc@Gmail.Com'
+    contactTitle: 'THÔNG TIN LIÊN HỆ',
+    contactOrg: 'HỘI PHỤ SẢN VIỆT NAM – VĂN PHÒNG KHU VỰC MIỀN TRUNG',
+    contactAddress: 'Trường Đại học Y dược Huế, số 06, Ngô Quyền, TP.Huế',
+    contactPhone: '0989 228 779',
+    contactEmail: 'vago.mientrung@gmail.com',
+    coordinatorTitle: 'ĐIỀU PHỐI CHUNG HỘI NGHỊ',
+    coordinatorName: 'PGS.TS. Lê Minh Tâm',
+    coordinatorPhone: '0989 228 779',
+    coordinatorEmail: 'leminhtam.med@gmail.com',
+    secretaryTitle: 'THƯ KÝ HỘI NGHỊ',
+    secretaryName: 'ThS.BS. Võ Văn Khoa',
+    secretaryPhone: '0903 522 510',
+    secretaryEmail: 'vovankhoa@huemed-univ.edu.vn'
   }
-} 
+}
