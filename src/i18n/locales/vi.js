@@ -135,5 +135,10 @@ export default {
     secretaryName: 'ThS.BS. Võ Văn Khoa',
     secretaryPhone: '0903 522 510',
     secretaryEmail: 'vovankhoa@huemed-univ.edu.vn'
+  },
+
+  search: {
+    searching: 'Đang tìm kiếm...',
+    noResults: 'Không tìm thấy kết quả phù hợp.'
   }
 }

@@ -1,0 +1,279 @@
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+export function useSearch() {
+  const { t, locale } = useI18n()
+  const searchQuery = ref('')
+  const isSearchOpen = ref(false)
+  const searchResults = ref([])
+  const isLoading = ref(false)
+
+  // Dữ liệu tìm kiếm - có thể mở rộng từ API hoặc store
+  const searchableData = computed(() => {
+    const currentLocale = locale.value
+    
+    return [
+      // Events/Programs
+      {
+        id: 'event-1',
+        type: 'event',
+        title: t('eventHighlight.highlights.0'),
+        description: t('eventHighlight.description'),
+        section: 'program',
+        keywords: ['hội thảo', 'phụ sản', 'workshop', 'obstetrics', 'gynecology']
+      },
+      {
+        id: 'event-2',
+        type: 'event',
+        title: t('eventHighlight.highlights.1'),
+        description: t('eventHighlight.description'),
+        section: 'program',
+        keywords: ['triển lãm', 'công nghệ', 'y tế', 'exhibition', 'medical', 'technology']
+      },
+      {
+        id: 'event-3',
+        type: 'event',
+        title: t('eventHighlight.highlights.2'),
+        description: t('eventHighlight.description'),
+        section: 'program',
+        keywords: ['giao lưu', 'chuyên gia', 'quốc tế', 'networking', 'experts', 'international']
+      },
+      {
+        id: 'event-4',
+        type: 'event',
+        title: t('eventHighlight.highlights.3'),
+        description: t('eventHighlight.description'),
+        section: 'program',
+        keywords: ['chứng nhận', 'tham dự', 'hội nghị', 'certification', 'attendance', 'conference']
+      },
+      
+      // Services
+      {
+        id: 'service-1',
+        type: 'service',
+        title: t('services.halalIndonesia'),
+        description: t('services.indonesiaMarketDesc'),
+        section: 'services',
+        keywords: ['halal', 'indonesia', 'quy định', 'regulations']
+      },
+      {
+        id: 'service-2',
+        type: 'service',
+        title: t('services.halalCertification'),
+        description: t('services.indonesiaMarketDesc'),
+        section: 'services',
+        keywords: ['chứng nhận', 'halal', 'certification', 'indonesia']
+      },
+      {
+        id: 'service-3',
+        type: 'service',
+        title: t('services.indonesiaMarket'),
+        description: t('services.indonesiaMarketDesc'),
+        section: 'services',
+        keywords: ['thị trường', 'indonesia', 'tiềm năng', 'market', 'potential']
+      },
+      {
+        id: 'service-4',
+        type: 'service',
+        title: t('services.vietnamBusiness'),
+        description: t('services.indonesiaMarketDesc'),
+        section: 'services',
+        keywords: ['doanh nghiệp', 'việt nam', 'indonesia', 'business', 'vietnam']
+      },
+      {
+        id: 'service-5',
+        type: 'service',
+        title: t('services.exportOpportunity'),
+        description: t('services.indonesiaMarketDesc'),
+        section: 'services',
+        keywords: ['xuất khẩu', 'cơ hội', 'thị trường', 'export', 'opportunity', 'market']
+      },
+      {
+        id: 'service-6',
+        type: 'service',
+        title: t('services.agricultureMarket'),
+        description: t('services.indonesiaMarketDesc'),
+        section: 'services',
+        keywords: ['nông sản', 'thị trường', 'indonesia', 'agriculture', 'market']
+      },
+      
+      // Accommodation
+      {
+        id: 'accommodation-1',
+        type: 'accommodation',
+        title: t('accommodation.policy_1'),
+        description: t('accommodation.description'),
+        section: 'accommodation',
+        keywords: ['chính sách', 'ưu đãi', 'đầu tư', 'policy', 'incentive', 'investment']
+      },
+      {
+        id: 'accommodation-2',
+        type: 'accommodation',
+        title: t('accommodation.policy_2'),
+        description: t('accommodation.description'),
+        section: 'accommodation',
+        keywords: ['chính sách', 'fdi', 'doanh nghiệp', 'policy', 'enterprises']
+      },
+      {
+        id: 'accommodation-3',
+        type: 'accommodation',
+        title: t('accommodation.procedure_1'),
+        description: t('accommodation.description'),
+        section: 'accommodation',
+        keywords: ['thủ tục', 'đầu tư', 'đặc biệt', 'procedure', 'investment', 'special']
+      },
+      {
+        id: 'accommodation-4',
+        type: 'accommodation',
+        title: t('accommodation.procedure_2'),
+        description: t('accommodation.description'),
+        section: 'accommodation',
+        keywords: ['thủ tục', 'đầu tư', 'đặc biệt', 'procedure', 'investment', 'special']
+      },
+      {
+        id: 'accommodation-5',
+        type: 'accommodation',
+        title: t('accommodation.news_1'),
+        description: t('accommodation.description'),
+        section: 'accommodation',
+        keywords: ['đầu tư', 'trực tiếp', 'nước ngoài', 'investment', 'direct', 'foreign']
+      },
+      {
+        id: 'accommodation-6',
+        type: 'accommodation',
+        title: t('accommodation.news_2'),
+        description: t('accommodation.description'),
+        section: 'accommodation',
+        keywords: ['fdi', 'việt nam', 'tỷ usd', 'vietnam', 'billion']
+      },
+      
+      // Activities
+      {
+        id: 'activity-1',
+        type: 'activity',
+        title: t('activities.activities.0'),
+        description: t('activities.description'),
+        section: 'activities',
+        keywords: ['tham quan', 'thành phố', 'city', 'tour']
+      },
+      {
+        id: 'activity-2',
+        type: 'activity',
+        title: t('activities.activities.1'),
+        description: t('activities.description'),
+        section: 'activities',
+        keywords: ['ẩm thực', 'địa phương', 'cuisine', 'local']
+      },
+      {
+        id: 'activity-3',
+        type: 'activity',
+        title: t('activities.activities.2'),
+        description: t('activities.description'),
+        section: 'activities',
+        keywords: ['giao lưu', 'văn hóa', 'cultural', 'exchange']
+      },
+      {
+        id: 'activity-4',
+        type: 'activity',
+        title: t('activities.activities.3'),
+        description: t('activities.description'),
+        section: 'activities',
+        keywords: ['di tích', 'lịch sử', 'historical', 'sites']
+      },
+      
+      // General info
+      {
+        id: 'intro-1',
+        type: 'info',
+        title: t('intro.title'),
+        description: t('intro.content'),
+        section: 'intro',
+        keywords: ['giới thiệu', 'hội nghị', 'khoa học', 'quốc tế', 'introduction', 'conference', 'scientific', 'international']
+      },
+      {
+        id: 'partners-1',
+        type: 'info',
+        title: t('partners.title'),
+        description: t('partners.description'),
+        section: 'partners',
+        keywords: ['đối tác', 'liên hệ', 'hợp tác', 'partners', 'contact', 'cooperation']
+      }
+    ]
+  })
+
+  // Hàm tìm kiếm
+  const performSearch = (query) => {
+    if (!query.trim()) {
+      searchResults.value = []
+      return
+    }
+
+    isLoading.value = true
+    
+    // Simulate API delay
+    setTimeout(() => {
+      const normalizedQuery = query.toLowerCase().trim()
+      const results = searchableData.value.filter(item => {
+        // Tìm kiếm trong title, description và keywords
+        const searchableText = [
+          item.title.toLowerCase(),
+          item.description.toLowerCase(),
+          ...item.keywords.map(k => k.toLowerCase())
+        ].join(' ')
+        
+        return searchableText.includes(normalizedQuery)
+      })
+      
+      searchResults.value = results.slice(0, 8) // Giới hạn 8 kết quả
+      isLoading.value = false
+    }, 300)
+  }
+
+  // Hàm xử lý input tìm kiếm
+  const handleSearchInput = (event) => {
+    const query = event.target.value
+    searchQuery.value = query
+    performSearch(query)
+  }
+
+  // Hàm mở/đóng dropdown tìm kiếm
+  const toggleSearch = () => {
+    isSearchOpen.value = !isSearchOpen.value
+    if (!isSearchOpen.value) {
+      searchQuery.value = ''
+      searchResults.value = []
+    }
+  }
+
+  // Hàm chọn kết quả tìm kiếm
+  const selectSearchResult = (result) => {
+    // Scroll đến section tương ứng
+    const sectionElement = document.getElementById(result.section)
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' })
+    }
+    
+    // Đóng dropdown và reset
+    isSearchOpen.value = false
+    searchQuery.value = ''
+    searchResults.value = []
+  }
+
+  // Hàm đóng dropdown khi click outside
+  const closeSearch = () => {
+    isSearchOpen.value = false
+    searchQuery.value = ''
+    searchResults.value = []
+  }
+
+  return {
+    searchQuery,
+    isSearchOpen,
+    searchResults,
+    isLoading,
+    handleSearchInput,
+    toggleSearch,
+    selectSearchResult,
+    closeSearch
+  }
+} 

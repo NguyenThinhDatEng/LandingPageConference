@@ -4,15 +4,59 @@
       <div class="topbar container flex md:justify-between md:items-center">
         <!-- Logo group - full width on mobile, flex-1 on desktop -->
         <div class="logo-group flex justify-center justify-start flex-1 items-center">
-          <img src="@/assets/imgs/logo/VAGO.png" alt="VAGO logo"/>
+          <img src="@/assets/imgs/logo/VAGO.png" alt="VAGO logo" />
         </div>
 
         <!-- Topbar right - full width on mobile, flex items on desktop -->
-        <div
-          class="topbar-right flex md:flex-row items-center justify-end gap-4 py-2 md:py-0">
-          <input
-            class="search-input hidden sm:flex flex-1 max-w-[480px] xl:min-w-[480px] bg-[#eeaa2c] border-none rounded-md px-2 md:px-6 py-3.5 text-xs md:text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
-            :placeholder="$t('header.search')" />
+        <div class="topbar-right flex md:flex-row items-center justify-end gap-4 py-2 md:py-0">
+          <!-- Search Container -->
+          <div class="search-container relative hidden sm:flex flex-1 max-w-[480px] xl:min-w-[480px]">
+            <input v-model="searchQuery" @input="handleSearchInput" @focus="isSearchOpen = true" @blur="handleBlur"
+              class="search-input w-full bg-[#eeaa2c] border-none rounded-md px-2 md:px-6 py-3.5 text-xs md:text-lg text-white italic font-normal outline-none shadow-md placeholder:text-white placeholder:opacity-85 placeholder:italic transition-all duration-200 focus:ring-2 focus:ring-[#eeaa2c]/50 focus:shadow-lg"
+              :placeholder="$t('header.search')" />
+            <!-- Search Results Dropdown -->
+            <div v-if="isSearchOpen && (searchQuery || isLoading)"
+              class="search-dropdown absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50 max-h-96 overflow-y-auto">
+              <!-- Loading State -->
+              <div v-if="isLoading" class="p-4 text-center text-gray-500">
+                <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-[#eeaa2c] mx-auto mb-2"></div>
+                {{ $t('search.searching') }}
+              </div>
+              <!-- No Results -->
+              <div v-else-if="searchResults.length === 0 && searchQuery" class="p-4 text-center text-gray-500">
+                {{ $t('search.noResults') }}
+              </div>
+              <!-- Search Results -->
+              <div v-else class="py-2">
+                <div v-for="result in searchResults" :key="result.id" @mousedown="selectSearchResult(result)"
+                  class="search-result-item px-4 py-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0 transition-colors duration-150">
+                  <div class="flex items-start gap-3">
+                    <!-- Icon based on type -->
+                    <div class="search-result-icon flex-shrink-0 mt-1">
+                      <div v-if="result.type === 'event'" class="w-4 h-4 bg-blue-500 rounded-full"></div>
+                      <div v-else-if="result.type === 'service'" class="w-4 h-4 bg-green-500 rounded-full"></div>
+                      <div v-else-if="result.type === 'accommodation'" class="w-4 h-4 bg-purple-500 rounded-full"></div>
+                      <div v-else-if="result.type === 'activity'" class="w-4 h-4 bg-orange-500 rounded-full"></div>
+                      <div v-else class="w-4 h-4 bg-gray-500 rounded-full"></div>
+                    </div>
+                    <!-- Content -->
+                    <div class="flex-1 min-w-0">
+                      <div class="search-result-title font-semibold text-gray-900 text-sm mb-1 truncate">
+                        {{ result.title }}
+                      </div>
+                      <div class="search-result-description text-gray-600 text-xs line-clamp-2">
+                        {{ result.description }}
+                      </div>
+                      <div class="search-result-section text-[#eeaa2c] text-xs font-medium mt-1">
+                        {{ $t(`sections.${result.section}`) }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Search Container -->
 
           <div class="flex items-center gap-4">
             <div class="lang-switch">
@@ -43,9 +87,9 @@
     <!-- Desktop navbar -->
     <div class="navbar-background hidden md:flex justify-center h-[var(--header-navbar-height)]">
       <nav class="navbar container md:w-6xl">
-        <ul class="menu flex gap-2 xl:gap-12">
+        <ul class="menu flex gap-2 xl:gap-8">
           <li v-for="item in menuItems" :key="item.key">
-            <a :href="item.href">{{ $t(item.translationKey) }}</a>
+            <a :href="item.href" class="px-2 xl:px-4">{{ $t(item.translationKey) }}</a>
           </li>
         </ul>
       </nav>
@@ -65,6 +109,8 @@
 </template>
 
 <script>
+import { useSearch } from '@/composables/useSearch'
+
 export default {
   name: "HeaderBar",
   data() {
@@ -97,6 +143,34 @@ export default {
     changeLocale(locale) {
       this.$i18n.locale = locale
       localStorage.setItem('locale', locale)
+    },
+    handleBlur(e) {
+      setTimeout(() => {
+        this.closeSearch()
+      }, 200)
+    }
+  },
+  setup() {
+    const {
+      searchQuery,
+      isSearchOpen,
+      searchResults,
+      isLoading,
+      handleSearchInput,
+      toggleSearch,
+      selectSearchResult,
+      closeSearch
+    } = useSearch()
+
+    return {
+      searchQuery,
+      isSearchOpen,
+      searchResults,
+      isLoading,
+      handleSearchInput,
+      toggleSearch,
+      selectSearchResult,
+      closeSearch
     }
   }
 };
@@ -240,5 +314,31 @@ export default {
 
 .menu li a:hover {
   color: #ffd24c;
+}
+
+.search-dropdown {
+  min-width: 100%;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-result-item {
+  transition: background 0.15s;
+}
+
+.search-result-item:hover {
+  background: #f3f4f6;
 }
 </style>

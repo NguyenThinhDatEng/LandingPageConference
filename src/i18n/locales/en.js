@@ -135,5 +135,10 @@ export default {
     secretaryName: 'MSc. Dr. Vo Van Khoa',
     secretaryPhone: '0903 522 510',
     secretaryEmail: 'vovankhoa@huemed-univ.edu.vn'
+  },
+
+  search: {
+    searching: 'Searching...',
+    noResults: 'No results found.'
   }
 }
