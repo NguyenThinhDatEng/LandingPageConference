@@ -197,6 +197,126 @@ export function useSearch() {
         description: t('partners.description'),
         section: 'partners',
         keywords: ['đối tác', 'liên hệ', 'hợp tác', 'partners', 'contact', 'cooperation']
+      },
+      
+      // Footer - Contact Information
+      {
+        id: 'footer-contact-1',
+        type: 'contact',
+        title: t('footer.contactTitle'),
+        description: `${t('footer.contactOrg')} - ${t('footer.contactAddress')}`,
+        section: 'footer',
+        keywords: ['thông tin liên hệ', 'hội phụ sản', 'việt nam', 'văn phòng', 'miền trung', 'contact information', 'obstetrics', 'vietnam', 'office', 'central']
+      },
+      {
+        id: 'footer-contact-2',
+        type: 'contact',
+        title: t('footer.contactPhone'),
+        description: 'Điện thoại liên hệ chính',
+        section: 'footer',
+        keywords: ['điện thoại', 'số điện thoại', 'phone', 'contact', '0989 228 779']
+      },
+      {
+        id: 'footer-contact-3',
+        type: 'contact',
+        title: 'vago.mientrung@gmail.com',
+        description: 'Email liên hệ chính',
+        section: 'footer',
+        keywords: ['email', 'gmail', 'vago', 'mientrung', 'contact email']
+      },
+      
+      // Footer - Coordinator Information
+      {
+        id: 'footer-coordinator-1',
+        type: 'contact',
+        title: t('footer.coordinatorTitle'),
+        description: `${t('footer.coordinatorName')} - ${t('footer.coordinatorPhone')}`,
+        section: 'footer',
+        keywords: ['điều phối', 'chung hội nghị', 'pgs.ts', 'lê minh tâm', 'coordinator', 'conference', 'assoc prof', 'le minh tam']
+      },
+      {
+        id: 'footer-coordinator-2',
+        type: 'contact',
+        title: 'leminhtam.med@gmail.com',
+        description: 'Email điều phối viên',
+        section: 'footer',
+        keywords: ['email', 'điều phối', 'coordinator', 'leminhtam', 'med']
+      },
+      
+      // Footer - Secretary Information
+      {
+        id: 'footer-secretary-1',
+        type: 'contact',
+        title: t('footer.secretaryTitle'),
+        description: `${t('footer.secretaryName')} - 0903 522 510`,
+        section: 'footer',
+        keywords: ['thư ký', 'hội nghị', 'ths.bs', 'võ văn khoa', 'secretary', 'conference', 'masters', 'vo van khoa']
+      },
+      {
+        id: 'footer-secretary-2',
+        type: 'contact',
+        title: 'vovankhoa@huemed-univ.edu.vn',
+        description: 'Email thư ký hội nghị',
+        section: 'footer',
+        keywords: ['email', 'thư ký', 'secretary', 'vovankhoa', 'huemed', 'univ']
+      },
+      
+      // Footer - Registration Form
+      {
+        id: 'footer-register-1',
+        type: 'form',
+        title: t('footer.registerTitle'),
+        description: 'Đăng ký thông tin liên hệ để nhận thông tin mới nhất về hội nghị',
+        section: 'footer',
+        keywords: ['đăng ký', 'thông tin liên hệ', 'form', 'register', 'contact information', 'form']
+      },
+      {
+        id: 'footer-register-2',
+        type: 'form',
+        title: t('footer.name'),
+        description: 'Trường thông tin họ tên trong form đăng ký',
+        section: 'footer',
+        keywords: ['họ tên', 'tên', 'name', 'full name', 'quý danh']
+      },
+      {
+        id: 'footer-register-3',
+        type: 'form',
+        title: t('footer.email'),
+        description: 'Trường thông tin email trong form đăng ký',
+        section: 'footer',
+        keywords: ['email', 'thư điện tử', 'email address']
+      },
+      {
+        id: 'footer-register-4',
+        type: 'form',
+        title: t('footer.phone'),
+        description: 'Trường thông tin điện thoại trong form đăng ký',
+        section: 'footer',
+        keywords: ['điện thoại', 'số điện thoại', 'phone', 'phone number', 'sđt']
+      },
+      {
+        id: 'footer-register-5',
+        type: 'form',
+        title: t('footer.content'),
+        description: 'Trường nội dung trong form đăng ký',
+        section: 'footer',
+        keywords: ['nội dung', 'content', 'message']
+      },
+      {
+        id: 'footer-register-6',
+        type: 'form',
+        title: t('footer.details'),
+        description: 'Trường chi tiết trong form đăng ký',
+        section: 'footer',
+        keywords: ['chi tiết', 'details', 'additional information']
+      },
+      {
+        id: 'footer-register-7',
+        type: 'form',
+        title: t('footer.sendInfo'),
+        description: 'Nút gửi thông tin đăng ký',
+        section: 'footer',
+        keywords: ['gửi thông tin', 'submit', 'send information', 'gửi']
       }
     ]
   })
@@ -251,6 +371,9 @@ export function useSearch() {
     const sectionElement = document.getElementById(result.section)
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      // Fallback: scroll xuống cuối trang nếu không tìm thấy section
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
     }
     
     // Đóng dropdown và reset

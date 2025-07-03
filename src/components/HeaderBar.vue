@@ -37,6 +37,8 @@
                       <div v-else-if="result.type === 'service'" class="w-4 h-4 bg-green-500 rounded-full"></div>
                       <div v-else-if="result.type === 'accommodation'" class="w-4 h-4 bg-purple-500 rounded-full"></div>
                       <div v-else-if="result.type === 'activity'" class="w-4 h-4 bg-orange-500 rounded-full"></div>
+                      <div v-else-if="result.type === 'contact'" class="w-4 h-4 bg-red-500 rounded-full"></div>
+                      <div v-else-if="result.type === 'form'" class="w-4 h-4 bg-yellow-500 rounded-full"></div>
                       <div v-else class="w-4 h-4 bg-gray-500 rounded-full"></div>
                     </div>
                     <!-- Content -->

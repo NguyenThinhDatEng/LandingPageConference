@@ -34,7 +34,8 @@ export default {
     program: 'PROGRAM',
     accommodation: 'ACCOMMODATION',
     activities: 'ACTIVITIES',
-    partners: 'PARTNERS'
+    partners: 'PARTNERS',
+    footer: 'FOOTER'
   },
 
   // Services Section

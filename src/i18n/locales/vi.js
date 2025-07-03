@@ -34,7 +34,8 @@ export default {
     program: 'CHƯƠNG TRÌNH',
     accommodation: 'LƯU TRÚ',
     activities: 'HOẠT ĐỘNG',
-    partners: 'ĐỐI TÁC'
+    partners: 'ĐỐI TÁC',
+    footer: 'Phần footer'
   },
 
   // Services Section

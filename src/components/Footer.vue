@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative">
+  <footer class="relative" id="footer">
     <div
       class="form-register absolute -top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[30%] sm:translate-y-[18%] md:translate-y-[4%] bg-yellow-500 w-11/12 md:w-6xl mx-auto rounded-none px-4 md:px-16 py-6 md:py-8 z-10">
       <h3 class="text-center text-xl md:text-2xl font-bold tracking-wide text-black mb-6 md:mb-8">
