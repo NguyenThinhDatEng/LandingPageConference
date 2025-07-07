@@ -141,5 +141,11 @@ export default {
   search: {
     searching: 'Searching...',
     noResults: 'No results found.'
+  },
+
+  form: {
+    submitting: 'Submitting...',
+    successMessage: 'Information sent successfully! We will contact you soon.',
+    errorMessage: 'An error occurred. Please try again.'
   }
 }

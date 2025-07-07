@@ -141,5 +141,11 @@ export default {
   search: {
     searching: 'Đang tìm kiếm...',
     noResults: 'Không tìm thấy kết quả phù hợp.'
+  },
+
+  form: {
+    submitting: 'Đang gửi...',
+    successMessage: 'Gửi thông tin thành công! Chúng tôi sẽ liên hệ lại sớm nhất.',
+    errorMessage: 'Có lỗi xảy ra. Vui lòng thử lại.'
   }
 }

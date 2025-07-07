@@ -5,38 +5,95 @@
       <h3 class="text-center text-xl md:text-2xl font-bold tracking-wide text-black mb-6 md:mb-8">
         {{ $t('footer.registerTitle') }}
       </h3>
-      <form class="flex flex-col gap-4">
+      
+      <!-- Success Message -->
+      <div v-if="submitSuccess" class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+        {{ $t('form.successMessage') }}
+      </div>
+      
+      <!-- Error Message -->
+      <div v-if="submitError" class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+        {{ submitError }}
+      </div>
+      
+      <!-- Validation Errors -->
+      <div v-if="validationErrors.length > 0" class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+        <ul class="list-disc list-inside">
+          <li v-for="error in validationErrors" :key="error">{{ error }}</li>
+        </ul>
+      </div>
+      
+      <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
         <!-- Mobile: Single column layout -->
         <div class="flex flex-col gap-4 md:hidden">
-          <input type="text" :placeholder="$t('footer.name')" required
+          <input 
+            v-model="formData.name"
+            type="text" 
+            :placeholder="$t('footer.name')" 
+            required
             class="w-full px-4 py-3 border-none rounded-md text-base bg-white text-black" />
-          <input type="email" :placeholder="$t('footer.email')" required
+          <input 
+            v-model="formData.email"
+            type="email" 
+            :placeholder="$t('footer.email')" 
+            required
             class="w-full bg-white text-black px-4 py-3 border-none rounded-md text-base" />
-          <input type="text" :placeholder="$t('footer.phone')" required
+          <input 
+            v-model="formData.phone"
+            type="text" 
+            :placeholder="$t('footer.phone')" 
+            required
             class="w-full px-4 py-3 border-none rounded-md text-base bg-white text-black" />
-          <input type="text" :placeholder="$t('footer.content')" required
+          <input 
+            v-model="formData.content"
+            type="text" 
+            :placeholder="$t('footer.content')" 
+            required
             class="w-full px-4 py-3 border-none rounded-md text-base bg-white text-black" />
         </div>
 
         <!-- Desktop: Two column layout -->
         <div class="hidden md:flex md:gap-4">
-          <input type="text" :placeholder="$t('footer.name')" required
+          <input 
+            v-model="formData.name"
+            type="text" 
+            :placeholder="$t('footer.name')" 
+            required
             class="flex-1 px-4 py-3 border-none rounded-md text-base bg-white text-black" />
-          <input type="email" :placeholder="$t('footer.email')" required
+          <input 
+            v-model="formData.email"
+            type="email" 
+            :placeholder="$t('footer.email')" 
+            required
             class="flex-1 bg-white text-black px-4 py-3 border-none rounded-md text-base" />
         </div>
         <div class="hidden md:flex md:gap-4">
-          <input type="text" :placeholder="$t('footer.phone')" required
+          <input 
+            v-model="formData.phone"
+            type="text" 
+            :placeholder="$t('footer.phone')" 
+            required
             class="flex-1 px-4 py-3 border-none rounded-md text-base bg-white text-black" />
-          <input type="text" :placeholder="$t('footer.content')" required
+          <input 
+            v-model="formData.content"
+            type="text" 
+            :placeholder="$t('footer.content')" 
+            required
             class="flex-1 px-4 py-3 border-none rounded-md text-base bg-white text-black" />
         </div>
 
-        <textarea :placeholder="$t('footer.details')" rows="3"
+        <textarea 
+          v-model="formData.details"
+          :placeholder="$t('footer.details')" 
+          rows="3"
           class="w-full border-none rounded-md px-4 py-3 text-base resize-y min-h-12 bg-white text-black"></textarea>
-        <button type="submit"
-          class="mx-auto mt-2 bg-white text-gray-800 border-none rounded-md px-6 md:px-8 py-2.5 text-sm md:text-base font-bold cursor-pointer transition-all duration-200 shadow-md hover:bg-blue-900 hover:text-white">
-          {{ $t('footer.sendInfo') }}
+        
+        <button 
+          type="submit"
+          :disabled="isSubmitting"
+          class="mx-auto mt-2 bg-white text-gray-800 border-none rounded-md px-6 md:px-8 py-2.5 text-sm md:text-base font-bold cursor-pointer transition-all duration-200 shadow-md hover:bg-blue-900 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed">
+          <span v-if="isSubmitting">{{ $t('form.submitting') }}</span>
+          <span v-else>{{ $t('footer.sendInfo') }}</span>
         </button>
       </form>
     </div>
@@ -70,8 +127,63 @@
 </template>
 
 <script>
+import { ref, reactive } from 'vue'
+import { useFormSubmission } from '@/composables/useFormSubmission'
+import { useFormValidation } from '@/composables/useFormValidation'
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  setup() {
+    const { isSubmitting, submitError, submitSuccess, submitForm, resetForm } = useFormSubmission()
+    const { validateForm } = useFormValidation()
+    
+    const validationErrors = ref([])
+    
+    const formData = reactive({
+      name: '',
+      email: '',
+      phone: '',
+      content: '',
+      details: ''
+    })
+    
+    const handleSubmit = async () => {
+      // Reset previous messages
+      resetForm()
+      validationErrors.value = []
+      
+      // Validate form
+      const errors = validateForm(formData)
+      if (errors.length > 0) {
+        validationErrors.value = errors
+        return
+      }
+      
+      // Submit form
+      const result = await submitForm(formData)
+      
+      if (result.success) {
+        // Reset form data
+        Object.keys(formData).forEach(key => {
+          formData[key] = ''
+        })
+        
+        // Auto hide success message after 5 seconds
+        setTimeout(() => {
+          resetForm()
+        }, 5000)
+      }
+    }
+    
+    return {
+      formData,
+      isSubmitting,
+      submitError,
+      submitSuccess,
+      validationErrors,
+      handleSubmit
+    }
+  }
 }
 </script>
 
