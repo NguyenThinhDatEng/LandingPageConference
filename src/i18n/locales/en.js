@@ -38,57 +38,54 @@ export default {
     footer: 'FOOTER'
   },
 
-  // Services Section
-  services: {
-    title: 'OUR SERVICES',
-    halalIndonesia: 'HALAL INDONESIA REGULATIONS',
-    halalCertification: 'LIST OF HALAL CERTIFICATION UNITS IN INDONESIA',
-    indonesiaMarket: 'INDONESIA: A PROMISING MARKET FOR VIETNAMESE BUSINESSES',
-    indonesiaMarketDesc: 'As the 4th largest population market in the world, Indonesia has a great demand for agricultural products',
-    vietnamBusiness: 'VIETNAMESE BUSINESSES STEP BY STEP CONQUERING THE "DIFFICULT" INDONESIA MARKET',
-    exportOpportunity: 'OPENING THE WAY FOR BUSINESSES TO EXPORT TO THE INDONESIA MARKET',
-    agricultureMarket: 'INDONESIA MARKET - WHAT OPPORTUNITIES FOR VIETNAMESE AGRICULTURAL PRODUCTS'
-  },
+ // Services Section
+services: {
+  title: 'SERVICES',
+  halalIndonesia: 'SERVICE 1',
+  halalCertification: 'SERVICE 2',
+  indonesiaMarket: 'SERVICE 3',
+  indonesiaMarketDesc: 'Service introduction',
+  vietnamBusiness: 'SERVICE 4',
+  exportOpportunity: 'SERVICE 5',
+  agricultureMarket: 'SERVICE 6'
+},
 
-  // Intro Section
-  intro: {
-    title: 'INTRODUCTION',
-    subtitle: 'INTERNATIONAL SCIENTIFIC CONFERENCE',
-    description: 'International Scientific Conference on Obstetrics and Gynecology',
-    content: 'The Vietnam Trade Office in Indonesia is an agency under the Ministry of Industry and Trade of Vietnam, playing a key role in promoting economic and trade relations between Vietnam and Indonesia. Located in Jakarta, the Trade Office is tasked with market research, trade promotion, business support for both countries, state management of trade, and strengthening bilateral economic cooperation. It serves as an important bridge helping Vietnamese enterprises access the Indonesian market and vice versa.'
-  },
+// Intro Section
+intro: {
+  title: 'INTRODUCTION',
+  subtitle: 'INTERNATIONAL SCIENTIFIC CONFERENCE',
+  description: 'International scientific conference on obstetrics and gynecology',
+  content: 'Introductory message'
+},
 
-  // Event Highlight Section
-  eventHighlight: {
-    title: 'EVENT HIGHLIGHTS',
-    subtitle: 'SPECIAL PROGRAM',
-    description: 'Discover the highlights of the conference',
-    highlights: [
-      'Advanced Workshop on Obstetrics and Gynecology',
-      'Latest medical technology exhibition',
-      'Networking with international experts',
-      'Conference attendance certification'
-    ]
-  },
+// Event Highlight Section
+eventHighlight: {
+  title: 'EVENT HIGHLIGHTS',
+  subtitle: 'SPECIAL PROGRAM',
+  description: 'Discover the key highlights of the conference',
+  highlights: [
+    'Event 1',
+    'Event 2',
+    'Event 3',
+    'Event 4'
+  ]
+},
 
-  // Accommodation Section
-  accommodation: {
-    title: 'ACCOMMODATION INFORMATION',
-    subtitle: 'HOTELS AND SERVICES',
-    description: 'We have prepared convenient accommodation options for you',
-    hotelInfo: '5-star hotel with full amenities',
-    location: 'Convenient location, near conference center',
-    booking: 'Book early for the best rates',
-    section_policies: 'INVESTMENT-RELATED POLICIES IN VIETNAM',
-    section_procedures: 'INVESTMENT PROCEDURES IN VIETNAM',
-    section_news: 'INVESTMENT NEWS',
-    policy_1: 'PROPOSALS FOR REFORMING INVESTMENT INCENTIVE POLICIES',
-    policy_2: 'DISCUSSION ON VIETNAM\'S INVESTMENT INCENTIVES FOR FDI ENTERPRISES',
-    procedure_1: 'SECTORS SUBJECT TO SPECIAL INVESTMENT PROCEDURES UNDER DECREE 19',
-    procedure_2: 'SPECIAL INVESTMENT PROCEDURES FROM JANUARY 15, 2025',
-    news_1: 'FOREIGN DIRECT INVESTMENT INTO VIETNAM AND ITS PROSPECTS',
-    news_2: 'FDI REGISTERED IN VIETNAM IN Q1 2025 NEARLY REACHED USD 11 BILLION, UP 34.7%'
-  },
+// Accommodation Section
+accommodation: {
+  title: 'ACCOMMODATION INFORMATION',
+  subtitle: 'HOTELS & SERVICES',
+  description: 'We have prepared convenient accommodation options for you',
+  hotelInfo: '5-star hotels with full amenities',
+  location: 'Convenient location, close to the conference center',
+  booking: 'Book early for the best rates',
+  section_policies: 'Hotel 1',
+  section_procedures: 'Hotel 2',
+  section_news: 'Hotel 3',
+  policy_1: 'Introduction to Hotel 1',
+  procedure_1: 'Introduction to Hotel 2',
+  news_1: 'Introduction to Hotel 3',
+},
 
   // Activities Section
   activities: {
