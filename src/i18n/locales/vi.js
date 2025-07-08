@@ -40,14 +40,14 @@ export default {
 
   // Services Section
   services: {
-    title: 'DỊCH VỤ CỦA CHÚNG TÔI',
-    halalIndonesia: 'QUY ĐỊNH VỀ HALAL INDONESIA',
-    halalCertification: 'DANH SÁCH CÁC ĐƠN VỊ CHỨNG NHẬN HALAL INDONESIA',
-    indonesiaMarket: 'INDONESIA: THỊ TRƯỜNG ĐẦY TIỀM NĂNG CỦA DOANH NGHIỆP VIỆT',
-    indonesiaMarketDesc: 'Là Thị Trường Có Quy Mô Dân Số Đứng Thứ 4 Trên Thế Giới, Indonesia Có Nhu Cầu Lớn Về Một Hàng Nông Sản',
-    vietnamBusiness: 'DOANH NGHIỆP VIỆT NAM TỪNG BƯỚC CHINH PHỤC THỊ TRƯỜNG "KHÓ TÍNH" INDONESIA',
-    exportOpportunity: 'MỞ ĐƯỜNG CHO DOANH NGHIỆP XUẤT KHẨU SANG THỊ TRƯỜNG INDONESIA',
-    agricultureMarket: 'THỊ TRƯỜNG INDONESIA - CƠ HỘI NÀO CHO NÔNG SẢN VIỆT'
+    title: 'DỊCH VỤ',
+    halalIndonesia: 'DỊCH VỤ 1',
+    halalCertification: 'DỊCH VỤ 2',
+    indonesiaMarket: 'DỊCH VỤ 3',
+    indonesiaMarketDesc: 'Giới thiệu dịch vụ ',
+    vietnamBusiness: 'DỊCH VỤ 4',
+    exportOpportunity: 'DỊCH VỤ 5',
+    agricultureMarket: 'DỊCH VỤ 6'
   },
 
   // Intro Section
@@ -55,7 +55,7 @@ export default {
     title: 'GIỚI THIỆU',
     subtitle: 'HỘI NGHỊ KHOA HỌC QUỐC TẾ',
     description: 'Hội nghị khoa học quốc tế về phụ sản',
-    content: 'Thương Vụ Việt Nam Tại Indonesia Là Cơ Quan Của Bộ Công Thương Việt Nam, Đóng Vai Trò Then Chốt Trong Việc Thúc Đẩy Quan Hệ Kinh Tế, Thương Mại Giữa Việt Nam Và Indonesia. Đặt Tại Jakarta, Thương Vụ Có Nhiệm Vụ Nghiên Cứu Thị Trường, Xúc Tiến Thương Mại, Hỗ Trợ Doanh Nghiệp Hai Nước, Quản Lý Nhà Nước Về Thương Mại Và Tăng Cường Hợp Tác Kinh Tế Song Phương. Đây Là Cầu Nối Quan Trọng Giúp Doanh Nghiệp Việt Nam Tiếp Cận Thị Trường Indonesia Và Ngược Lại.'
+    content: 'Lời giới thiệu'
   },
 
   // Event Highlight Section
@@ -64,10 +64,10 @@ export default {
     subtitle: 'CHƯƠNG TRÌNH ĐẶC BIỆT',
     description: 'Khám phá những điểm nổi bật của hội nghị',
     highlights: [
-      'Hội thảo chuyên sâu về phụ sản',
-      'Triển lãm công nghệ y tế mới nhất',
-      'Giao lưu với chuyên gia quốc tế',
-      'Chứng nhận tham dự hội nghị'
+      'Sự kiện 1',
+      'Sự kiện 2',
+      'Sự kiện 3',
+      'Sự kiện 4'
     ]
   },
 
@@ -79,20 +79,17 @@ export default {
     hotelInfo: 'Khách sạn 5 sao với đầy đủ tiện nghi',
     location: 'Vị trí thuận tiện, gần trung tâm hội nghị',
     booking: 'Đặt phòng trước để có giá tốt nhất',
-    section_policies: 'CHÍNH SÁCH LIÊN QUAN TỚI ĐẦU TƯ VIỆT NAM',
-    section_procedures: 'THỦ TỤC ĐẦU TƯ TẠI VIỆT NAM',
-    section_news: 'TIN TỨC ĐẦU TƯ',
-    policy_1: 'ĐỀ XUẤT CẢI CÁCH CHÍNH SÁCH ƯU ĐÃI ĐẦU TƯ',
-    policy_2: 'BÀN VỀ CHÍNH SÁCH ƯU ĐÃI ĐẦU TƯ CỦA VIỆT NAM ĐỐI VỚI DOANH NGHIỆP FDI',
-    procedure_1: 'CÁC LĨNH VỰC ĐƯỢC ÁP DỤNG THỦ TỤC ĐẦU TƯ ĐẶC BIỆT THEO NGHỊ ĐỊNH 19',
-    procedure_2: 'THỦ TỤC ĐẦU TƯ ĐẶC BIỆT TỪ NGÀY 15/01/2025',
-    news_1: 'ĐẦU TƯ TRỰC TIẾP NƯỚC NGOÀI VÀO VIỆT NAM VÀ TRIỂN VỌNG',
-    news_2: 'VỐN FDI ĐĂNG KÝ VÀO VIỆT NAM TRONG QUÝ 1/2025 ĐẠT GẦN 11 TỶ USD, TĂNG 34,7%'
+    section_policies: 'Khách sạn 1',
+    section_procedures: 'Khách sạn 2',
+    section_news: 'Khách sạn 3',
+    policy_1: 'Giới thiệu KS 1',
+    procedure_1: 'Giới thiệu KS 2',
+    news_1: 'Giới thiệu KS 3',
   },
 
   // Activities Section
   activities: {
-    title: 'HOẠT ĐỘNG ĐIỂN HÌNH',
+    title: 'HOẠT ĐỘNG NỔI BẬT',
     subtitle: 'CHƯƠNG TRÌNH NGOẠI KHÓA',
     description: 'Khám phá những hoạt động thú vị bên lề hội nghị',
     activities: [
