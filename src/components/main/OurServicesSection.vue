@@ -1,25 +1,26 @@
 <template>
   <SectionContainer :title="'Chương trình'" section-id="services">
-    <div class="programs-content flex flex-col gap-4 w-full">
+    <div class="programs-content flex flex-col gap-4 md:gap-8 w-full">
       <!-- Bảng ngày thứ nhất -->
-      <div class="overflow-x-auto mb-8">
+      <div class="overflow-x-auto">
         <div class="font-bold text-xl text-gray-700 mb-1">NGÀY THỨ NHẤT (Thứ Sáu, ngày 15/8/2025)</div>
         <table class="min-w-full rounded-lg">
           <thead>
             <tr class="bg-white">
-              <th class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-green-300 text-blue w-32 md:w-64">
+              <th
+                class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-blue text-blue w-32 md:w-64">
                 Thời gian</th>
-              <th class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-green-300 text-blue">
+              <th class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-blue text-blue">
                 Chương trình
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64">07:00 - 17:00</td>
               <td class="py-2 px-4 align-top font-bold text-blue-900"></td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64">17:30 - 19:00</td>
               <td class="py-2 px-4 align-top font-bold text-blue-900"></td>
             </tr>
@@ -40,50 +41,51 @@
         <table class="min-w-full rounded-lg">
           <thead>
             <tr class="bg-white">
-              <th class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-green-300 text-blue w-32 md:w-64">
+              <th
+                class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-blue text-blue w-32 md:w-64">
                 Thời gian</th>
-              <th class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-green-300 text-blue">Nội
+              <th class="py-2 px-4 text-left italic font-medium text-gray-700 border-b border-blue text-blue">Nội
                 dung</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64">08:00 - 10:00</td>
               <td class="py-2 px-4 align-top font-bold text-blue-900"></td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64" rowspan="3">10:00 - 11:30</td>
               <td class="py-2 px-4 align-top font-bold text-blue-900">PHIÊN 1A</td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="hidden"></td>
               <td class="py-2 px-4 align-top font-bold text-blue-900">PHIÊN 1B</td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="hidden"></td>
               <td class="py-2 px-4 align-top font-bold text-blue-900">PHIÊN 1C</td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64">11:30 - 13:30</td>
               <td class="py-2 px-4 align-top"></td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64" rowspan="3">13:30 - 15:00</td>
               <td class="py-2 px-4 align-top font-bold text-blue-900">PHIÊN 2A</td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="hidden"></td>
               <td class="py-2 px-4 align-top font-bold text-blue-900">PHIÊN 2B</td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="hidden"></td>
               <td class="py-2 px-4 align-top font-bold text-blue-900">PHIÊN 2C</td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64">15:00 - 15:30</td>
               <td class="py-2 px-4 align-top"></td>
             </tr>
-            <tr class="border-b border-green-200">
+            <tr class="border-b border-blue">
               <td class="py-2 px-4 align-top time-cell w-32 md:w-64" rowspan="2">15:30 - 17:00</td>
               <td class="py-2 px-4 align-top font-bold text-blue-900">PHIÊN 7C</td>
             </tr>
@@ -111,20 +113,24 @@ export default {
   width: 100%;
 
   .programs-content {
-  
+
     /* Optional: Add a subtle green border radius for the table wrapper */
     div.overflow-x-auto {
       border: 2px solid #8bc34a;
       border-radius: 12px;
       padding: 8px;
     }
-  
+
     .time-cell {
       color: #2d286c !important;
     }
-  
+
     .text-blue {
       color: #2d286c;
+    }
+
+    .border-blue {
+      border-color: #02408b;
     }
   }
 }
