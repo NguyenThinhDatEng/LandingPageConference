@@ -29,7 +29,7 @@ export default {
   
   // Sections
   sections: {
-    services: 'DỊCH VỤ CỦA CHÚNG TÔI',
+    services: 'DỊCH VỤ',
     intro: 'GIỚI THIỆU',
     program: 'CHƯƠNG TRÌNH',
     accommodation: 'LƯU TRÚ',
