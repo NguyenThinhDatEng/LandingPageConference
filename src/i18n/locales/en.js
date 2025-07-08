@@ -1,13 +1,14 @@
 export default {
   common: {
-    viewDetail: 'View Detail',
-    detail: 'Detail',
+    viewDetail: 'View Details',
+    detail: 'Details',
     viewMore: 'View More',
     phone: 'Phone'
   },
+
   // Header
   header: {
-    search: 'Search Information ....',
+    search: 'Search information...',
     home: 'Home',
     intro: 'Introduction',
     program: 'Program',
@@ -22,106 +23,106 @@ export default {
   hero: {
     title: 'VAGO 2025',
     subtitle: '12th Extended Session',
-    description: 'The Obstetrics and Gynecology Conference of Central Vietnam - Tay Nguyen',
-    description2: '12th Edition of the Expansion in 2025',
-    description3: 'VIETNAM CARDIOVASCULAR IMAGING 3RD TIME'
+    description: 'CENTRAL – HIGHLANDS OBSTETRICS & GYNECOLOGY CONFERENCE',
+    description2: '12TH EXTENDED EDITION – 2025',
+    description3: '3RD VIETNAM CARDIOVASCULAR IMAGING SYMPOSIUM'
   },
   
   // Sections
   sections: {
-    services: 'OUR SERVICES',
+    services: 'SERVICES',
     intro: 'INTRODUCTION',
     program: 'PROGRAM',
     accommodation: 'ACCOMMODATION',
     activities: 'ACTIVITIES',
     partners: 'PARTNERS',
-    footer: 'FOOTER'
+    footer: 'Footer Section'
   },
 
- // Services Section
-services: {
-  title: 'SERVICES',
-  halalIndonesia: 'SERVICE 1',
-  halalCertification: 'SERVICE 2',
-  indonesiaMarket: 'SERVICE 3',
-  indonesiaMarketDesc: 'Service introduction',
-  vietnamBusiness: 'SERVICE 4',
-  exportOpportunity: 'SERVICE 5',
-  agricultureMarket: 'SERVICE 6'
-},
+  // Services Section
+  services: {
+    title: 'SERVICES',
+    halalIndonesia: 'Service 1',
+    halalCertification: 'Service 2',
+    indonesiaMarket: 'Service 3',
+    indonesiaMarketDesc: 'Service Introduction',
+    vietnamBusiness: 'Service 4',
+    exportOpportunity: 'Service 5',
+    agricultureMarket: 'Service 6'
+  },
 
-// Intro Section
-intro: {
-  title: 'INTRODUCTION',
-  subtitle: 'INTERNATIONAL SCIENTIFIC CONFERENCE',
-  description: 'International scientific conference on obstetrics and gynecology',
-  content: 'Introductory message'
-},
+  // Intro Section
+  intro: {
+    title: 'INTRODUCTION',
+    subtitle: 'INTERNATIONAL SCIENTIFIC CONFERENCE',
+    description: 'International scientific conference on obstetrics and gynecology',
+    content: 'Introductory message'
+  },
 
-// Event Highlight Section
-eventHighlight: {
-  title: 'EVENT HIGHLIGHTS',
-  subtitle: 'SPECIAL PROGRAM',
-  description: 'Discover the key highlights of the conference',
-  highlights: [
-    'Event 1',
-    'Event 2',
-    'Event 3',
-    'Event 4'
-  ]
-},
+  // Event Highlight Section
+  eventHighlight: {
+    title: 'EVENT HIGHLIGHTS',
+    subtitle: 'SPECIAL PROGRAM',
+    description: 'Discover the highlights of the conference',
+    highlights: [
+      'Event 1',
+      'Event 2',
+      'Event 3',
+      'Event 4'
+    ]
+  },
 
-// Accommodation Section
-accommodation: {
-  title: 'ACCOMMODATION INFORMATION',
-  subtitle: 'HOTELS & SERVICES',
-  description: 'We have prepared convenient accommodation options for you',
-  hotelInfo: '5-star hotels with full amenities',
-  location: 'Convenient location, close to the conference center',
-  booking: 'Book early for the best rates',
-  section_policies: 'Hotel 1',
-  section_procedures: 'Hotel 2',
-  section_news: 'Hotel 3',
-  policy_1: 'Introduction to Hotel 1',
-  procedure_1: 'Introduction to Hotel 2',
-  news_1: 'Introduction to Hotel 3',
-},
+  // Accommodation Section
+  accommodation: {
+    title: 'ACCOMMODATION INFORMATION',
+    subtitle: 'HOTELS & SERVICES',
+    description: 'We have arranged convenient accommodation options for you',
+    hotelInfo: '5-star hotel with full amenities',
+    location: 'Convenient location near the conference center',
+    booking: 'Book early to get the best rates',
+    section_policies: 'Hotel 1',
+    section_procedures: 'Hotel 2',
+    section_news: 'Hotel 3',
+    policy_1: 'Introduction to Hotel 1',
+    procedure_1: 'Introduction to Hotel 2',
+    news_1: 'Introduction to Hotel 3',
+  },
 
   // Activities Section
   activities: {
-    title: 'TYPICAL ACTIVITIES',
+    title: 'HIGHLIGHT ACTIVITIES',
     subtitle: 'EXTRACURRICULAR PROGRAM',
-    description: 'Discover interesting activities alongside the conference',
+    description: 'Explore engaging activities alongside the conference',
     activities: [
       'City tour',
-      'Local cuisine',
+      'Local cuisine experience',
       'Cultural exchange',
-      'Historical site visits'
+      'Historical site visit'
     ]
   },
 
   // Partners Section
   partners: {
-    title: 'PARTNERS AND CONTACT',
-    subtitle: 'CONNECTIONS AND COOPERATION',
-    description: 'We are proud to partner with prestigious partners',
+    title: 'PARTNERS & CONTACT',
+    subtitle: 'COLLABORATION & PARTNERSHIPS',
+    description: 'We are proud to collaborate with esteemed partners',
     contact: 'CONTACT',
-    contactInfo: 'Contact information and registration',
+    contactInfo: 'Contact and registration information',
     register: 'REGISTER TO ATTEND',
-    registerDesc: 'Register now to receive the latest information'
+    registerDesc: 'Register now to receive the latest updates'
   },
 
   // Footer
   footer: {
-    registerTitle: 'REGISTER CONTACT INFORMATION',
+    registerTitle: 'REGISTER YOUR CONTACT INFORMATION',
     name: 'FULL NAME',
     email: 'EMAIL',
     phone: 'PHONE',
-    content: 'CONTENT',
+    content: 'MESSAGE',
     details: 'DETAILS',
-    sendInfo: 'SEND INFORMATION',
+    sendInfo: 'SUBMIT INFORMATION',
     contactTitle: 'CONTACT INFORMATION',
-    contactOrg: 'Vietnam Association of Obstetricians and Gynecologists – Central Office',
+    contactOrg: 'VIETNAM ASSOCIATION OF OBSTETRICS AND GYNECOLOGY – CENTRAL REGION OFFICE',
     contactAddress: 'Hue University of Medicine and Pharmacy, 06 Ngo Quyen, Hue City',
     contactPhone: '0989 228 779',
     contactEmail: 'vago.mientrung@gmail.com',
@@ -137,6 +138,6 @@ accommodation: {
 
   search: {
     searching: 'Searching...',
-    noResults: 'No results found.'
+    noResults: 'No matching results found.'
   }
 }
