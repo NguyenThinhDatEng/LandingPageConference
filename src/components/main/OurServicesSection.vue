@@ -35,7 +35,7 @@
       <div class="overflow-x-auto">
         <div class="font-bold text-xl text-gray-700 mb-1">NGÀY THỨ HAI (Thứ Bảy, ngày 16/8/2025)</div>
         <div class="italic text-gray-700 mb-2">
-          Địa điểm: Khách sạn Sheraton, Khu đô thị Vinhomes Imperia, Q. Hồng Bàng, TP. Hải Phòng
+          Địa điểm: Trung tâm Hội nghị Goldland Plaza số 14-20 Lý Thường Kiệt
         </div>
         <table class="min-w-full rounded-lg">
           <thead>
