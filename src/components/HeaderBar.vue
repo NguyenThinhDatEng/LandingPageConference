@@ -1,14 +1,15 @@
 <template>
   <header class="header-bar flex flex-col item-center px-2 md:px-0">
     <div class="topbar-background flex justify-center">
-      <div class="topbar container flex md:justify-between md:items-center">
+      <div class="topbar container flex gap-2 md:gap-8 md:justify-between md:items-center">
         <!-- Logo group - full width on mobile, flex-1 on desktop -->
-        <div class="logo-group flex justify-center justify-start flex-1 items-center">
+        <div class="logo-group flex justify-center justify-start items-center gap-2 md:gap-8">
           <img src="@/assets/imgs/logo/VAGO.png" alt="VAGO logo" />
+          <img src="@/assets/imgs/logo/HAGO.jpg" alt="HAGO logo" class="small-logo"/>
         </div>
 
         <!-- Topbar right - full width on mobile, flex items on desktop -->
-        <div class="topbar-right flex md:flex-row items-center justify-end gap-4 py-2 md:py-0">
+        <div class="topbar-right flex flex-1  md:flex-row items-center justify-end gap-4 py-2 md:py-0">
           <!-- Search Container -->
           <div class="search-container relative hidden sm:flex flex-1 max-w-[480px] xl:min-w-[480px]">
             <input v-model="searchQuery" @input="handleSearchInput" @focus="isSearchOpen = true" @blur="handleBlur"
@@ -194,11 +195,14 @@ export default {
 }
 
 .logo-group img {
-  height: var(--header-topbar-height);
-  max-width: 156.44px;
+  max-height: 80px;
   object-fit: contain;
   background: transparent;
   transition: height 0.2s;
+
+  &.small-logo {
+    max-height: 76px;
+  }
 }
 
 .topbar-right {
