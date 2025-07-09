@@ -18,7 +18,7 @@
       </div>
       <!-- Right: Image -->
       <div class="md:basis-6/10 md:w-6/10 w-full h-[350px] md:h-auto">
-        <img src="@/assets/imgs/accommodationInfo/info.jpg" alt="Seaview Living" class="w-full h-full object-cover" />
+        <img src="@/assets/imgs/accommodationInfo/info.png" alt="Seaview Living" class="w-full h-full object-cover rounded-md" />
       </div>
     </div>
   </SectionFull>
