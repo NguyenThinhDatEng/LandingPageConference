@@ -1,76 +1,44 @@
 <template>
-  <SectionContainer :title="$t('accommodation.title')" section-id="accommodation">
-    <!-- Mobile: Single column layout -->
-    <div class="grid grid-cols-1 gap-6 md:hidden">
-      <div class="flex flex-col items-start h-full justify-between" v-for="(col, colIdx) in columns" :key="colIdx">
-        <div class="text-base font-bold text-gray-900 mb-4">{{ $t(col.titleKey) }}</div>
-        <div class="flex flex-col gap-3 w-full">
-          <div class="flex gap-3" v-for="(item, idx) in col.items" :key="idx">
-            <img :src="item.img" alt="info" class="w-20 h-16 object-cover rounded-md flex-shrink-0" loading="lazy" />
-            <div class="item-title text-gray-900 font-bold text-sm leading-tight flex-1">{{ $t(item.titleKey) }}</div>
+  <SectionFull :title="$t('accommodation.title')" section-id="accommodation" is-full-width class="accomodation-section">
+    <div class="w-full flex flex-col items-center md:flex-row bg-[#fff] overflow-hidden">
+      <!-- Left: Text -->
+      <div
+        class="min-h-[300px] sm:min-h-[400px] px-[20px] sm:px-[60px] py-4 md:pr-[40px] sm:py-8 bg-[#232323] md:basis-4/10 md:w-4/10 w-full flex flex-col justify-center text-white md:items-start items-center">
+        <div class="w-full md:w-auto">
+          <div class="font-bold text-2xl mb-4" style="font-family: 'Pacifico', cursive;">
+            Giới thiệu tổng quan
           </div>
-          <div class="text-sm text-center text-gray-800 italic underline cursor-pointer hover:text-blue-800 transition-colors duration-200 mt-2">
-            {{ $t('common.viewMore') }}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Desktop: Original 3-column grid layout -->
-    <div class="hidden md:grid md:grid-cols-3 gap-8">
-      <div class="flex flex-col items-start h-full justify-between" v-for="(col, colIdx) in columns" :key="colIdx">
-        <div class="text-lg md:text-xl font-bold text-gray-900 mb-8">{{ $t(col.titleKey) }}</div>
-        <div class="flex flex-col gap-4">
-          <div class="flex gap-4" v-for="(item, idx) in col.items" :key="idx">
-            <img :src="item.img" alt="info" class="w-[120px] h-[70px] object-cover rounded-md" loading="lazy" />
-            <div class="item-title text-gray-900 font-bold">{{ $t(item.titleKey) }}</div>
-          </div>
-          <div class="text-base text-center text-gray-800 italic underline cursor-pointer hover:text-blue-800 transition-colors duration-200">
-            {{ $t('common.viewMore') }}
+          <div class="text-base leading-relaxed">
+            Trung tâm Hội nghị Goldland Plaza – toạ lạc tại số 14–20 Lý Thường Kiệt, TP Huế, là một địa điểm hiện đại,
+            sang trọng bậc nhất tại khu vực miền Trung.<br /><br /> Với kiến trúc tinh tế, không gian linh hoạt, đây là
+            lựa chọn lý
+            tưởng cho các sự kiện tầm cỡ trong nước và quốc tế.
           </div>
         </div>
       </div>
+      <!-- Right: Image -->
+      <div class="md:basis-6/10 md:w-6/10 w-full h-[350px] md:h-auto">
+        <img src="@/assets/imgs/accommodationInfo/info.jpg" alt="Seaview Living" class="w-full h-full object-cover" />
+      </div>
     </div>
-  </SectionContainer>
+  </SectionFull>
 </template>
 
 <script>
-import info from '@/assets/imgs/accommodationInfo/info.jpg'
-import SectionContainer from '@/components/SectionContainer.vue'
-
 export default {
   name: 'AccommodationInfoSection',
   components: {
-    SectionContainer
-  },
-  data() {
-    return {
-      columns: [
-        {
-          titleKey: 'accommodation.section_policies',
-          items: [
-            { img: info, titleKey: 'accommodation.policy_1' },
-            { img: info, titleKey: 'accommodation.policy_2' }
-          ]
-        },
-        {
-          titleKey: 'accommodation.section_procedures',
-          items: [
-            { img: info, titleKey: 'accommodation.procedure_1' },
-            { img: info, titleKey: 'accommodation.procedure_2' }
-          ]
-        },
-        {
-          titleKey: 'accommodation.section_news',
-          items: [
-            { img: info, titleKey: 'accommodation.news_1' },
-            { img: info, titleKey: 'accommodation.news_2' }
-          ]
-        }
-      ]
-    }
   }
 }
 </script>
 
-<style scoped></style>
+<style>
+/* Optional: Custom font for the title if you want to match the style in the image */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.accomodation-section {
+  .container-background {
+    padding: unset !important;
+  }
+}
+</style>
