@@ -5,7 +5,7 @@
         <h2 class="container text-3xl md:max-w-6xl font-extrabold text-gray-900 px-2 md:px-0">
           {{ title }}
         </h2>
-        <div class="container-background w-full flex justify-center py-4 md:py-8">
+        <div ref="bgRef" class="container-background w-full flex justify-center py-4 md:py-8">
           <div class="px-2 md:px-0" :class="isFullWidth ? 'w-full' : 'md:max-w-6xl'">
             <slot></slot>
           </div>
@@ -16,8 +16,10 @@
 </template>
 
 <script>
+import { onMounted, getCurrentInstance } from 'vue';
+
 export default {
-  name: "SectionContainer",
+  name: "SectionFull",
   props: {
     title: {
       type: String,
@@ -31,6 +33,18 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  setup() {
+    const {proxy} = getCurrentInstance()
+    onMounted(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true
+          observer.disconnect()
+        }
+      })
+      if (proxy.$refs.bgRef) observer.observe(proxy.$refs.bgRef)
+    });
   },
 };
 </script>

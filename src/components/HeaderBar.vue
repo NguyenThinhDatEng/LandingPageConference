@@ -1,5 +1,5 @@
 <template>
-  <header class="header-bar flex flex-col item-center px-2 md:px-0">
+  <header class="header-bar flex flex-col item-center px-2 sm:px-0">
     <div class="topbar-background flex justify-center">
       <div class="topbar container flex gap-2 md:gap-8 md:justify-between md:items-center">
         <!-- Logo group - full width on mobile, flex-1 on desktop -->
@@ -73,7 +73,7 @@
             </div>
             <!-- Mobile menu icon -->
             <button
-              class="mobile-menu-btn md:hidden flex flex-col justify-center items-center w-10 h-10 bg-[#003f91] border-none rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#002d6b]"
+              class="mobile-menu-btn sm:hidden flex flex-col justify-center items-center w-10 h-10 bg-[#003f91] border-none rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#002d6b]"
               @click="toggleMobileMenu" :class="{ 'active': isMobileMenuOpen }">
               <span
                 class="hamburger-line w-5 h-0.5 bg-white my-0.5 transition-all duration-300 ease-in-out rounded-md"></span>
@@ -88,11 +88,11 @@
     </div>
 
     <!-- Desktop navbar -->
-    <div class="navbar-background hidden md:flex justify-center h-[var(--header-navbar-height)]">
+    <div class="navbar-background hidden sm:flex justify-center h-[var(--header-navbar-height)]">
       <nav class="navbar container md:w-6xl">
         <ul class="menu flex gap-2 xl:gap-8">
           <li v-for="item in menuItems" :key="item.key">
-            <a :href="item.href" class="px-2 xl:px-4">{{ $t(item.translationKey) }}</a>
+            <a :href="item.href" class="sm:px-1 md:px-4 text-sm md:text-lg">{{ $t(item.translationKey) }}</a>
           </li>
         </ul>
       </nav>
@@ -309,7 +309,6 @@ export default {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-size: 1.15rem;
   font-family: inherit;
   display: block;
   transition: color 0.2s, border-bottom 0.2s;

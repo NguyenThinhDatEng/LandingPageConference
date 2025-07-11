@@ -24,7 +24,7 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, rgba(0, 63, 145, 0.6) 60%, rgba(0, 63, 145, 0.1) 100%), url('@/assets/imgs/Banner.jpg') center/cover no-repeat;
+  background: linear-gradient(to right, rgba(0, 63, 145, 0.6) 60%, rgba(0, 63, 145, 0.1) 100%), url('@/assets/imgs/Banner.webp') center/cover no-repeat;
   aspect-ratio: 5 / 2;
   color: #fff;
 }
