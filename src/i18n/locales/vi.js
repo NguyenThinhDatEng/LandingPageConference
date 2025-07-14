@@ -70,17 +70,12 @@ export default {
   // Accommodation Section
   accommodation: {
     title: 'THÔNG TIN LƯU TRÚ',
-    subtitle: 'KHÁCH SẠN VÀ DỊCH VỤ',
-    description: 'Chúng tôi đã chuẩn bị các lựa chọn lưu trú thuận tiện cho bạn',
-    hotelInfo: 'Khách sạn 5 sao với đầy đủ tiện nghi',
-    location: 'Vị trí thuận tiện, gần trung tâm hội nghị',
-    booking: 'Đặt phòng trước để có giá tốt nhất',
-    section_policies: 'Khách sạn 1',
-    section_procedures: 'Khách sạn 2',
-    section_news: 'Khách sạn 3',
-    policy_1: 'Giới thiệu KS 1',
-    procedure_1: 'Giới thiệu KS 2',
-    news_1: 'Giới thiệu KS 3',
+    overviewTitle: 'Giới thiệu tổng quan',
+    overviewText: `Trung tâm Hội nghị Goldland Plaza – toạ lạc tại số 14–20 Lý Thường Kiệt, TP Huế, là một địa điểm hiện đại,
+sang trọng bậc nhất tại khu vực miền Trung. <br/><br/>
+Với kiến trúc tinh tế, không gian linh hoạt, đây là lựa chọn lý tưởng cho các sự kiện tầm cỡ trong nước và quốc tế.`,
+    venueTitle: 'Không gian tổ chức sự kiện',
+    venueText: `Goldland Plaza sở hữu hệ thống hội trường cao cấp, sức chứa lên đến <b>1.500</b> khách, trang bị âm thanh – ánh sáng chuyên nghiệp.<br/><br/>Địa điểm lý tưởng để tổ chức hội nghị khoa học, triển lãm y tế, hội thảo chuyên đề và tiệc chiêu đãi quy mô lớn.`
   },
 
   // Partners Section

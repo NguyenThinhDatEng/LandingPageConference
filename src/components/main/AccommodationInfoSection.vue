@@ -1,5 +1,5 @@
 <template>
-  <SectionFull :title="$t('accommodation.title')" section-id="accommodation" is-full-width class="accomodation-section">
+  <SectionFull :title="$t('accommodation.title')" section-id="accommodation" is-full-width class="accommodation-section">
     <div class="w-full flex flex-col items-center md:flex-row bg-[#fff] overflow-hidden">
       <!-- Left: Text -->
       <transition name="slide-fade" mode="out-in">
@@ -27,33 +27,33 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import img1 from '@/assets/imgs/accommodationInfo/info1.png';
 import img2 from '@/assets/imgs/accommodationInfo/info2.jpg';
 
 export default {
   name: 'AccommodationInfoSection',
   setup() {
-    const contents = [
+    const { t } = useI18n();
+    const contents = computed(() => [
       {
-        title: 'Giới thiệu tổng quan',
-        text: `Trung tâm Hội nghị Goldland Plaza – toạ lạc tại số 14–20 Lý Thường Kiệt, TP Huế, là một địa điểm hiện đại,
-sang trọng bậc nhất tại khu vực miền Trung. <br/><br/>
-Với kiến trúc tinh tế, không gian linh hoạt, đây là lựa chọn lý tưởng cho các sự kiện tầm cỡ trong nước và quốc tế.`,
+        title: t('accommodation.overviewTitle'),
+        text: t('accommodation.overviewText'),
         img: img1
       },
       {
-        title: 'Không gian tổ chức sự kiện',
-        text: `Goldland Plaza sở hữu hệ thống hội trường cao cấp, sức chứa lên đến <b>1.500</b> khách, trang bị âm thanh – ánh sáng chuyên nghiệp.<br/><br/>Địa điểm lý tưởng để tổ chức hội nghị khoa học, triển lãm y tế, hội thảo chuyên đề và tiệc chiêu đãi quy mô lớn.`,
+        title: t('accommodation.venueTitle'),
+        text: t('accommodation.venueText'),
         img: img2
       }
-    ];
+    ]);
     const currentIndex = ref(0);
     let intervalId = null;
 
     onMounted(() => {
       intervalId = setInterval(() => {
-        currentIndex.value = (currentIndex.value + 1) % contents.length;
+        currentIndex.value = (currentIndex.value + 1) % contents.value.length;
       }, 5000);
     });
 
@@ -66,11 +66,11 @@ Với kiến trúc tinh tế, không gian linh hoạt, đây là lựa chọn l�
 }
 </script>
 
-<style>
+<style lang="scss">
 /* Optional: Custom font for the title if you want to match the style in the image */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-.accomodation-section {
+.accommodation-section {
   .container-background {
     padding: unset !important;
   }

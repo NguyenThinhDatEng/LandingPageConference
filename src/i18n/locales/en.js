@@ -70,7 +70,11 @@ export default {
 
   // Accommodation Section
   accommodation: {
-    title: 'ACCOMMODATION',
+    title: 'ACCOMMODATION INFORMATION',
+    overviewTitle: 'Overview',
+    overviewText: `Goldland Plaza Convention Center – located at 14–20 Ly Thuong Kiet, Hue City, is a modern and luxurious venue in the Central region. <br/><br/>With its exquisite architecture and flexible space, it is an ideal choice for national and international events.`,
+    venueTitle: 'Event Venue',
+    venueText: `Goldland Plaza features a high-class hall system with a capacity of up to <b>1,500</b> guests, equipped with professional sound and lighting.<br/><br/>It is an ideal venue for scientific conferences, medical exhibitions, seminars, and large-scale banquets.`
   },
 
   // Partners Section
