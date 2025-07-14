@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderBar />
     <div class="flex flex-col gap-16">
-      <HeroSection />
+      <BannerSection />
       <IntroSection />
       <EventHighlightSection />
       <OurServicesSection />
@@ -16,7 +16,7 @@
 
 <script>
 import HeaderBar from "./components/HeaderBar.vue";
-import HeroSection from "./components/HeroSection.vue";
+import BannerSection from "./components/BannerSection.vue";
 import IntroSection from "@/components/main/IntroSection.vue";
 import EventHighlightSection from "@/components/main/EventHighlightSection.vue";
 import OurServicesSection from "./components/main/OurServicesSection.vue";
@@ -29,7 +29,7 @@ export default {
   name: "App",
   components: {
     HeaderBar,
-    HeroSection,
+    BannerSection,
     IntroSection,
     EventHighlightSection,
     OurServicesSection,

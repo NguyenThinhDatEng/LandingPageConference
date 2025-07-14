@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'HeroSection'
+  name: 'BannerSection'
 }
 </script>
 
@@ -24,7 +24,10 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, rgba(0, 63, 145, 0.6) 60%, rgba(0, 63, 145, 0.1) 100%), url('@/assets/imgs/Banner.webp') center/cover no-repeat;
+  background-image: linear-gradient(to right, rgba(0, 63, 145, 0.6) 60%, rgba(0, 63, 145, 0.1) 100%), url('@/assets/imgs/Banner-4K.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   aspect-ratio: 5 / 2;
   color: #fff;
 }
