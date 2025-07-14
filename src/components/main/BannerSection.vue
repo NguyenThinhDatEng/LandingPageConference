@@ -1,5 +1,5 @@
 <template>
-  <section class="hero scroll-mt-[var(--top-scroll)] px-2 md:pl-32" id="banner">
+  <section class="hero min-h-[228px] scroll-mt-[var(--top-scroll)] px-2 md:pl-32" id="banner">
     <div class="hero-content">
       <!-- <h1>{{ $t('hero.title') }}<br />{{ $t('hero.subtitle') }}</h1>
       <div class="subtitle uppercase">
@@ -19,7 +19,6 @@ export default {
 <style scoped>
 .hero {
   position: relative;
-  min-height: 440px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -56,10 +55,6 @@ export default {
 }
 
 @media (max-width: 900px) {
-  .hero {
-    min-height: 320px;
-  }
-
   .hero-content {
     padding: 32px 0;
   }
