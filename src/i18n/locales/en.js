@@ -84,19 +84,6 @@ export default {
     news_1: 'Introduction to Hotel 3',
   },
 
-  // Activities Section
-  activities: {
-    title: 'HIGHLIGHT ACTIVITIES',
-    subtitle: 'EXTRACURRICULAR PROGRAM',
-    description: 'Explore engaging activities alongside the conference',
-    activities: [
-      'City tour',
-      'Local cuisine experience',
-      'Cultural exchange',
-      'Historical site visit'
-    ]
-  },
-
   // Partners Section
   partners: {
     title: 'PARTNERS & CONTACT',
@@ -144,5 +131,8 @@ export default {
   },
   Hue: {
     title: 'A glimpse of Hue'
+  },
+  report: {
+    title: 'Reporter'
   }
 }

@@ -131,5 +131,9 @@ export default {
 
   Hue: {
     title: 'Đôi nét về Huế'
+  },
+
+  report: {
+    title: 'Báo cáo viên'
   }
 }
