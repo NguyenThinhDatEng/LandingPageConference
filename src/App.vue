@@ -4,10 +4,11 @@
     <div class="flex flex-col gap-16">
       <BannerSection />
       <IntroSection />
-      <EventHighlightSection />
-      <OurServicesSection />
+      <PdfViewerSection />
+      <ActivitiesSection />
+      <ProgramSection />
       <AccommodationInfoSection />
-      <TypicalActivitiesSection />
+      <HueSection />
       <PartnersAndContactSection />
     </div>
     <Footer />
@@ -16,12 +17,13 @@
 
 <script>
 import HeaderBar from "./components/HeaderBar.vue";
-import BannerSection from "./components/BannerSection.vue";
+import BannerSection from "./components/main/BannerSection.vue";
 import IntroSection from "@/components/main/IntroSection.vue";
-import EventHighlightSection from "@/components/main/EventHighlightSection.vue";
-import OurServicesSection from "./components/main/OurServicesSection.vue";
+import PdfViewerSection from "@/components/main/PdfViewerSection.vue";
+import ActivitiesSection from "@/components/main/ActivitiesSection.vue";
+import ProgramSection from "./components/main/ProgramSection.vue";
 import AccommodationInfoSection from "./components/main/AccommodationInfoSection.vue";
-import TypicalActivitiesSection from "./components/main/TypicalActivitiesSection.vue";
+import HueSection from "./components/main/HueSection.vue";
 import PartnersAndContactSection from "./components/main/PartnersAndContactSection.vue";
 import Footer from "./components/Footer.vue";
 
@@ -31,10 +33,11 @@ export default {
     HeaderBar,
     BannerSection,
     IntroSection,
-    EventHighlightSection,
-    OurServicesSection,
+    PdfViewerSection,
+    ActivitiesSection,
+    ProgramSection,
     AccommodationInfoSection,
-    TypicalActivitiesSection,
+    HueSection,
     PartnersAndContactSection,
     Footer,
   },

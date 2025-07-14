@@ -13,10 +13,11 @@ export default {
     intro: 'Introduction',
     program: 'Program',
     register: 'Register',
-    services: 'Services',
+    programs: 'Services',
     accommodation: 'Accommodation',
     activities: 'Activities',
-    partners: 'Partners'
+    partners: 'Partners',
+    report: 'Reporter'
   },
   
   // Hero Section
@@ -30,7 +31,7 @@ export default {
   
   // Sections
   sections: {
-    services: 'SERVICES',
+    programs: 'SERVICES',
     intro: 'INTRODUCTION',
     program: 'PROGRAM',
     accommodation: 'ACCOMMODATION',
@@ -40,7 +41,7 @@ export default {
   },
 
   // Services Section
-  services: {
+  programs: {
     title: 'SERVICES',
     halalIndonesia: 'Service 1',
     halalCertification: 'Service 2',
@@ -60,16 +61,12 @@ export default {
   },
 
   // Event Highlight Section
-  eventHighlight: {
-    title: 'EVENT HIGHLIGHTS',
-    subtitle: 'SPECIAL PROGRAM',
-    description: 'Discover the highlights of the conference',
-    highlights: [
-      'Event 1',
-      'Event 2',
-      'Event 3',
-      'Event 4'
-    ]
+  activities: {
+    title: 'Highlighted Activities',
+    _01: 'Activity 1',
+    _02: 'Activity 2',
+    _03: 'Activity 3',
+    _04: 'Activity 4',
   },
 
   // Accommodation Section
@@ -145,5 +142,8 @@ export default {
     submitting: 'Submitting...',
     successMessage: 'Information sent successfully! We will contact you soon.',
     errorMessage: 'An error occurred. Please try again.'
+  },
+  Hue: {
+    title: 'A glimpse of Hue'
   }
 }

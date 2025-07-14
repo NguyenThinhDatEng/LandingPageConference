@@ -89,8 +89,8 @@
 
     <!-- Desktop navbar -->
     <div class="navbar-background hidden sm:flex justify-center h-[var(--header-navbar-height)]">
-      <nav class="navbar container md:w-6xl">
-        <ul class="menu flex gap-2 xl:gap-8">
+      <nav class="navbar container md:w-7xl">
+        <ul class="menu flex justify-between">
           <li v-for="item in menuItems" :key="item.key">
             <a :href="item.href" class="sm:px-1 md:px-4 text-sm md:text-lg">{{ $t(item.translationKey) }}</a>
           </li>
@@ -122,12 +122,12 @@ export default {
       menuItems: [
         { key: 'home', href: '#banner', translationKey: 'header.home' },
         { key: 'intro', href: '#intro', translationKey: 'header.intro' },
-        { key: 'program', href: '#program', translationKey: 'header.program' },
-        { key: 'register', href: '#partners', translationKey: 'header.register' },
-        { key: 'services', href: '#services', translationKey: 'header.services' },
-        { key: 'accommodation', href: '#accommodation', translationKey: 'header.accommodation' },
+        { key: 'report', href: '#report', translationKey: 'header.report' },
         { key: 'activities', href: '#activities', translationKey: 'header.activities' },
-        { key: 'partners', href: '#partners', translationKey: 'header.partners' }
+        { key: 'programs', href: '#programs', translationKey: 'header.programs' },
+        { key: 'accommodation', href: '#accommodation', translationKey: 'header.accommodation' },
+        { key: 'partners', href: '#partners', translationKey: 'header.partners' },
+        { key: 'register', href: '#partners', translationKey: 'header.register' },
       ]
     };
   },

@@ -17,32 +17,32 @@ export function useSearch() {
       {
         id: 'event-1',
         type: 'event',
-        title: t('eventHighlight.highlights.0'),
-        description: t('eventHighlight.description'),
+        title: t('activities.highlights.0'),
+        description: t('activities.description'),
         section: 'program',
         keywords: ['hội thảo', 'phụ sản', 'workshop', 'obstetrics', 'gynecology']
       },
       {
         id: 'event-2',
         type: 'event',
-        title: t('eventHighlight.highlights.1'),
-        description: t('eventHighlight.description'),
+        title: t('activities.highlights.1'),
+        description: t('activities.description'),
         section: 'program',
         keywords: ['triển lãm', 'công nghệ', 'y tế', 'exhibition', 'medical', 'technology']
       },
       {
         id: 'event-3',
         type: 'event',
-        title: t('eventHighlight.highlights.2'),
-        description: t('eventHighlight.description'),
+        title: t('activities.highlights.2'),
+        description: t('activities.description'),
         section: 'program',
         keywords: ['giao lưu', 'chuyên gia', 'quốc tế', 'networking', 'experts', 'international']
       },
       {
         id: 'event-4',
         type: 'event',
-        title: t('eventHighlight.highlights.3'),
-        description: t('eventHighlight.description'),
+        title: t('activities.highlights.3'),
+        description: t('activities.description'),
         section: 'program',
         keywords: ['chứng nhận', 'tham dự', 'hội nghị', 'certification', 'attendance', 'conference']
       },
@@ -51,49 +51,49 @@ export function useSearch() {
       {
         id: 'service-1',
         type: 'service',
-        title: t('services.halalIndonesia'),
-        description: t('services.indonesiaMarketDesc'),
-        section: 'services',
+        title: t('programs.halalIndonesia'),
+        description: t('programs.indonesiaMarketDesc'),
+        section: 'programs',
         keywords: ['halal', 'indonesia', 'quy định', 'regulations']
       },
       {
         id: 'service-2',
         type: 'service',
-        title: t('services.halalCertification'),
-        description: t('services.indonesiaMarketDesc'),
-        section: 'services',
+        title: t('programs.halalCertification'),
+        description: t('programs.indonesiaMarketDesc'),
+        section: 'programs',
         keywords: ['chứng nhận', 'halal', 'certification', 'indonesia']
       },
       {
         id: 'service-3',
         type: 'service',
-        title: t('services.indonesiaMarket'),
-        description: t('services.indonesiaMarketDesc'),
-        section: 'services',
+        title: t('programs.indonesiaMarket'),
+        description: t('programs.indonesiaMarketDesc'),
+        section: 'programs',
         keywords: ['thị trường', 'indonesia', 'tiềm năng', 'market', 'potential']
       },
       {
         id: 'service-4',
         type: 'service',
-        title: t('services.vietnamBusiness'),
-        description: t('services.indonesiaMarketDesc'),
-        section: 'services',
+        title: t('programs.vietnamBusiness'),
+        description: t('programs.indonesiaMarketDesc'),
+        section: 'programs',
         keywords: ['doanh nghiệp', 'việt nam', 'indonesia', 'business', 'vietnam']
       },
       {
         id: 'service-5',
         type: 'service',
-        title: t('services.exportOpportunity'),
-        description: t('services.indonesiaMarketDesc'),
-        section: 'services',
+        title: t('programs.exportOpportunity'),
+        description: t('programs.indonesiaMarketDesc'),
+        section: 'programs',
         keywords: ['xuất khẩu', 'cơ hội', 'thị trường', 'export', 'opportunity', 'market']
       },
       {
         id: 'service-6',
         type: 'service',
-        title: t('services.agricultureMarket'),
-        description: t('services.indonesiaMarketDesc'),
-        section: 'services',
+        title: t('programs.agricultureMarket'),
+        description: t('programs.indonesiaMarketDesc'),
+        section: 'programs',
         keywords: ['nông sản', 'thị trường', 'indonesia', 'agriculture', 'market']
       },
       

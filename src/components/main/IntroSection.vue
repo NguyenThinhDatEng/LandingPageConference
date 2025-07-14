@@ -4,7 +4,7 @@
       <!-- Image container -->
       <div class="w-full">
         <img 
-          src="@/assets/imgs/intro/intro.jpg" 
+          src="@/assets/imgs/intro/intro.webp" 
           alt="Giới thiệu"
           class="rounded-md shadow-lg object-cover w-full h-48 sm:h-64 md:h-auto md:max-h-96" 
           loading="lazy"

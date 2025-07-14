@@ -10,12 +10,13 @@ export default {
     search: 'Tìm Kiếm Thông Tin ....',
     home: 'Trang Chủ',
     intro: 'Giới Thiệu',
-    program: 'Chương Trình',
+    event: 'Hoạt động',
     register: 'Đăng ký',
-    services: 'Dịch vụ',
+    programs: 'Chương trình',
     accommodation: 'Lưu Trú',
     activities: 'Hoạt động',
-    partners: 'Đối tác'
+    partners: 'Đối tác',
+    report: 'Báo cáo viên'
   },
   
   // Hero Section
@@ -29,7 +30,7 @@ export default {
   
   // Sections
   sections: {
-    services: 'DỊCH VỤ',
+    programs: 'DỊCH VỤ',
     intro: 'GIỚI THIỆU',
     program: 'CHƯƠNG TRÌNH',
     accommodation: 'LƯU TRÚ',
@@ -39,7 +40,7 @@ export default {
   },
 
   // Services Section
-  services: {
+  programs: {
     title: 'DỊCH VỤ',
     halalIndonesia: 'DỊCH VỤ 1',
     halalCertification: 'DỊCH VỤ 2',
@@ -59,16 +60,12 @@ export default {
   },
 
   // Event Highlight Section
-  eventHighlight: {
-    title: 'SỰ KIỆN NỔI BẬT',
-    subtitle: 'CHƯƠNG TRÌNH ĐẶC BIỆT',
-    description: 'Khám phá những điểm nổi bật của hội nghị',
-    highlights: [
-      'Sự kiện 1',
-      'Sự kiện 2',
-      'Sự kiện 3',
-      'Sự kiện 4'
-    ]
+  activities: {
+    title: 'Hoạt động nổi bật',
+    _01: 'Hoạt động 1',
+    _02: 'Hoạt động 2',
+    _03: 'Hoạt động 3',
+    _04: 'Hoạt động 4',
   },
 
   // Accommodation Section
@@ -85,19 +82,6 @@ export default {
     policy_1: 'Giới thiệu KS 1',
     procedure_1: 'Giới thiệu KS 2',
     news_1: 'Giới thiệu KS 3',
-  },
-
-  // Activities Section
-  activities: {
-    title: 'HOẠT ĐỘNG NỔI BẬT',
-    subtitle: 'CHƯƠNG TRÌNH NGOẠI KHÓA',
-    description: 'Khám phá những hoạt động thú vị bên lề hội nghị',
-    activities: [
-      'Tham quan thành phố',
-      'Ẩm thực địa phương',
-      'Giao lưu văn hóa',
-      'Tham quan di tích lịch sử'
-    ]
   },
 
   // Partners Section
@@ -144,5 +128,9 @@ export default {
     submitting: 'Đang gửi...',
     successMessage: 'Gửi thông tin thành công! Chúng tôi sẽ liên hệ lại sớm nhất.',
     errorMessage: 'Có lỗi xảy ra. Vui lòng thử lại.'
+  },
+
+  Hue: {
+    title: 'Đôi nét về Huế'
   }
 }

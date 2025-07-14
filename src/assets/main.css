@@ -5,7 +5,7 @@
 
 :root {
   /* hoặc giá trị thực tế của .topbar */
-  --header-topbar-height: 88px;
+  --header-topbar-height: 112px;
   /* hoặc giá trị thực tế của .navbar */
   --header-navbar-height: 48px;
   --header-bar-height: calc(var(--header-topbar-height) + var(--header-navbar-height));
