@@ -11,13 +11,12 @@ export default {
     search: 'Search information...',
     home: 'Home',
     intro: 'Introduction',
-    program: 'Program',
-    register: 'Register',
-    programs: 'Services',
-    accommodation: 'Accommodation',
+    report: 'Reporter',
     activities: 'Activities',
+    programs: 'Programs',
+    accommodation: 'Accommodation',
     partners: 'Partners',
-    report: 'Reporter'
+    register: 'Register'
   },
   
   // Hero Section

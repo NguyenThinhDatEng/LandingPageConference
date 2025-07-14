@@ -10,13 +10,12 @@ export default {
     search: 'Tìm Kiếm Thông Tin ....',
     home: 'Trang Chủ',
     intro: 'Giới Thiệu',
-    event: 'Hoạt động',
-    register: 'Đăng ký',
-    programs: 'Chương trình',
+    report: 'Báo Cáo Viên',
+    activities: 'Hoạt Động',
+    programs: 'Chương Trình',
     accommodation: 'Lưu Trú',
-    activities: 'Hoạt động',
     partners: 'Đối tác',
-    report: 'Báo cáo viên'
+    register: 'Đăng ký'
   },
   
   // Hero Section

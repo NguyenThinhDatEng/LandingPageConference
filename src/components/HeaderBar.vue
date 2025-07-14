@@ -92,7 +92,7 @@
       <nav class="navbar container md:w-7xl">
         <ul class="menu flex justify-between">
           <li v-for="item in menuItems" :key="item.key">
-            <a :href="item.href" class="sm:px-1 md:px-4 text-sm md:text-lg">{{ $t(item.translationKey) }}</a>
+            <a :href="item.href" class="sm:px-1 md:px-4 text-sm md:text-lg uppercase">{{ $t(item.translationKey) }}</a>
           </li>
         </ul>
       </nav>
