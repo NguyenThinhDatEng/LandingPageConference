@@ -70,18 +70,7 @@ export default {
 
   // Accommodation Section
   accommodation: {
-    title: 'ACCOMMODATION INFORMATION',
-    subtitle: 'HOTELS & SERVICES',
-    description: 'We have arranged convenient accommodation options for you',
-    hotelInfo: '5-star hotel with full amenities',
-    location: 'Convenient location near the conference center',
-    booking: 'Book early to get the best rates',
-    section_policies: 'Hotel 1',
-    section_procedures: 'Hotel 2',
-    section_news: 'Hotel 3',
-    policy_1: 'Introduction to Hotel 1',
-    procedure_1: 'Introduction to Hotel 2',
-    news_1: 'Introduction to Hotel 3',
+    title: 'ACCOMMODATION',
   },
 
   // Partners Section
@@ -134,5 +123,22 @@ export default {
   },
   report: {
     title: 'Reporter'
+  },
+  program: {
+    title: 'Program',
+    day1: 'FIRST DAY (Friday, August 15, 2025)',
+    day2: 'SECOND DAY (Saturday, August 16, 2025)',
+    location: 'Venue: Goldland Plaza Convention Center, 14-20 Ly Thuong Kiet',
+    time: 'Time',
+    content: 'Content',
+    program: 'Program',
+    session_1A: 'SESSION 1A',
+    session_1B: 'SESSION 1B',
+    session_1C: 'SESSION 1C',
+    session_2A: 'SESSION 2A',
+    session_2B: 'SESSION 2B',
+    session_2C: 'SESSION 2C',
+    session_7C: 'SESSION 7C',
+    session_8C: 'SESSION 8C'
   }
 }

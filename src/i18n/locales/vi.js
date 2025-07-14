@@ -135,5 +135,23 @@ export default {
 
   report: {
     title: 'Báo cáo viên'
+  },
+
+  program: {
+    title: 'Chương trình',
+    day1: 'NGÀY THỨ NHẤT (Thứ Sáu, ngày 15/8/2025)',
+    day2: 'NGÀY THỨ HAI (Thứ Bảy, ngày 16/8/2025)',
+    location: 'Địa điểm: Trung tâm Hội nghị Goldland Plaza số 14-20 Lý Thường Kiệt',
+    time: 'Thời gian',
+    content: 'Nội dung',
+    program: 'Chương trình',
+    session_1A: 'PHIÊN 1A',
+    session_1B: 'PHIÊN 1B',
+    session_1C: 'PHIÊN 1C',
+    session_2A: 'PHIÊN 2A',
+    session_2B: 'PHIÊN 2B',
+    session_2C: 'PHIÊN 2C',
+    session_7C: 'PHIÊN 7C',
+    session_8C: 'PHIÊN 8C'
   }
 }
