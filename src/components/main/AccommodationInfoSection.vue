@@ -19,7 +19,7 @@
       <!-- Right: Image -->
       <transition name="slide-fade" mode="out-in">
         <div class="md:basis-6/10 md:w-6/10 w-full h-[350px] md:h-auto" :key="currentIndex + '-img'">
-          <img :src="contents[currentIndex].img" alt="Accommodation Info" class="w-full h-full object-cover rounded-md" />
+          <img :src="contents[currentIndex].img" alt="Accommodation Info" class="w-full h-full object-cover" />
         </div>
       </transition>
     </div>
